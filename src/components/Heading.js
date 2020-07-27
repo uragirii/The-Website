@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const styles = {
     "div": {
@@ -22,15 +22,11 @@ const styles = {
     }
   }
 
-export class Heading extends Component {
-    render() {
-        const {label} = this.props
-        return (
-            <div style={styles.div}>
-                <span style={styles.line}>{label.slice(0,3)}</span><span style={styles.notline}>{label.slice(3,label.length)}</span>
-            </div>
-        )
-    }
+export default function Heading(props) {
+  const {label} = props
+  return (
+    <div style={styles.div} {...props}>
+        <span style={styles.line}>{label.slice(0,3)}</span><span style={styles.notline}>{label.slice(3,label.length)}</span>
+    </div>
+)
 }
-
-export default Heading
