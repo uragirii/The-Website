@@ -1,7 +1,18 @@
 import React from 'react'
 
 const styles = {
-    text:{}
+    text:{
+        "fontFamily": "Consolas",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "fontSize": "18px",
+        "lineHeight": "21px",
+        "letterSpacing": "0.005em",
+        "color": "#000000",
+        "marginTop" : "3%",
+        "display" : "flex",
+        "width" : "auto"
+      }
 }
 
 

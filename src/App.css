@@ -3,7 +3,10 @@
 }
 
 
-
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+}
 
 
 .section {
