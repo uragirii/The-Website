@@ -19,10 +19,10 @@ const styles = {
  }
   
 }
-// TODO: ADD LOGOS AND SHRINK THE SIZE
-function App() {
+// TODO: ADD Actual On submit 
+function ContactMe() {
   return (
-    <div className="App">
+    <div className="Contact">
     <div style={styles.section}>
       <div style={{display:'flex'}}>
       <svg width="300" height="100vh" viewBox="0 0 378 1024" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default ContactMe;
