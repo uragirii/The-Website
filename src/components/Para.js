@@ -1,5 +1,5 @@
 import React from 'react'
-
+import colors from '../colors'
 const styles = {
     text:{
         "fontFamily": "Consolas",
@@ -11,7 +11,8 @@ const styles = {
         "color": "#000000",
         "marginTop" : "3%",
         "display" : "flex",
-        "width" : "auto"
+        "width" : "auto",
+        "color":colors.secondary.text
       }
 }
 

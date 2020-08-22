@@ -6,12 +6,13 @@ import AboutMeBlob from './assests/AboutMe_Blob.png'
 import StackBlob from './assests/Stack_Blob.png'
 import jslogo from './assests/jslogo.png'
 import photo from './assests/apoorv.jpg'
+import colors from './colors'
 
 const styles = {
   "section": {
     "height": "100vh",
     "maxHeight": "100vh",
-
+    "backgroundColor":colors.primary.background,
     // "borderBottom": "1px solid #000000",
     "position" : "relative"
   },
@@ -24,6 +25,7 @@ const styles = {
     "letterSpacing": "0.07em",
     "color": "#000000",
     "textAlign" : "center",
+    "color" : colors.primary.text
   },
   "caption" : {
     "fontFamily": "Consolas",
@@ -33,7 +35,8 @@ const styles = {
     "lineHeight": "21px",
     "color": "rgba(0, 0, 0, 0.5)",
     "textAlign" : "center",
-    "marginTop" : "3%"
+    "marginTop" : "3%",
+    "color" : colors.secondary.text
   },
   "container" : {
     "paddingLeft" : "10%",
@@ -63,8 +66,8 @@ function Home() {
   return (
     <div className="Home">
         <div style={styles.section}>
-        <div style={{backgroundColor:"#FF0066"}}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display:"block"}}><path fill="#E5e5e5" fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,197.3C320,181,400,139,480,138.7C560,139,640,181,720,176C800,171,880,117,960,117.3C1040,117,1120,171,1200,213.3C1280,256,1360,288,1400,304L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        <div style={{backgroundColor:colors.secondary.background}}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display:"block"}}><path fill={colors.primary.background} fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,197.3C320,181,400,139,480,138.7C560,139,640,181,720,176C800,171,880,117,960,117.3C1040,117,1120,171,1200,213.3C1280,256,1360,288,1400,304L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </div>
           <div style={styles.heading}>
           👋 Hi, I’m Apoorv Kansal

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import colors from '../colors'
 const styles = {
     "div": {
       "textTransform": "uppercase",
@@ -10,7 +10,7 @@ const styles = {
       "lineHeight": "22px",
       "display": "flex",
       "letterSpacing": "0.11em",
-      "color": "#000000"
+      "color": colors.primary.text
     },
     "line": {
       "borderTop": "3px solid #FF0066",

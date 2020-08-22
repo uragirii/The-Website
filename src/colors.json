@@ -1,0 +1,14 @@
+{
+    "creator" : "Apoorv Kansal",
+    "for" : "The Website",
+    "createdOn" : "2020-08-22",
+    "lastRevision" : "2020-08-22",
+    "primary" : {
+        "background" : "#0D0416",
+        "text" : "#FFFFFF"
+    },
+    "secondary" : {
+        "background": "#D50056",
+        "text" : "#F4F1F1"
+    }
+}

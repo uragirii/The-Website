@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Heading, Button, Para, TextInput, TextArea, ProjectsBar } from "./components/index";
-import Projects from "./Projects"
+import Home from "./Home"
+
 const styles = {
   "section": {
     "height": "100vh",
@@ -36,7 +37,7 @@ const styles = {
 function App() {
   return (
     <div className="App">
-      <Projects/>
+      <Home/>
     </div>
   );
 }
