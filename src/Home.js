@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React, {useRef, useEffect} from 'react';
+// import './App.css';
 import { Heading, Button, Para } from "./components/index";
 
 import AboutMeBlob from './assests/AboutMe_Blob.png'
@@ -7,6 +7,9 @@ import StackBlob from './assests/Stack_Blob.png'
 import jslogo from './assests/jslogo.png'
 import photo from './assests/apoorv.jpg'
 import colors from './colors'
+import gsap from 'gsap'
+import { useIntersection } from 'react-use'
+
 
 const styles = {
   "section": {
@@ -25,7 +28,7 @@ const styles = {
     "letterSpacing": "0.07em",
     "color": "#000000",
     "textAlign" : "center",
-    "color" : colors.primary.text
+    "color" : colors.primary.text,
   },
   "caption" : {
     "fontFamily": "Consolas",
@@ -36,7 +39,7 @@ const styles = {
     "color": "rgba(0, 0, 0, 0.5)",
     "textAlign" : "center",
     "marginTop" : "3%",
-    "color" : colors.secondary.text
+    "color" : colors.secondary.text,
   },
   "container" : {
     "paddingLeft" : "10%",
@@ -63,19 +66,71 @@ const styles = {
 }
 // TODO: ADD LOGOS AND SHRINK THE SIZE
 function Home() {
+  const section1 = useRef(null)
+  const section2 = useRef(null)
+  const section3 = useRef(null)
+
+  const intersection1 = useIntersection(section1, {
+    root:null,
+    rootMargin:"0px",
+    threshold:0.8
+  })
+
+  const intersection2 = useIntersection(section2, {
+    root:null,
+    rootMargin:"0px",
+    threshold:0.5
+  })
+
+  const intersection3 = useIntersection(section3, {
+    root:null,
+    rootMargin:"0px",
+    threshold:0.8
+  })
+
+  const fadeIn =  (element)=>{
+    gsap.to(element, 1,{
+      opacity:1,
+      y:-60,
+      ease: 'power4.out',
+      stagger: {
+        amount:0.3
+      }
+    })
+  }
+
+  const fadeOut = (element)=> {
+    gsap.to(element, 1,{
+      opacity:0,
+      y:-20,
+      ease: 'power4.out',
+      stagger: {
+        amount:0.3
+      }
+    })
+  }
+
+
+  intersection1 && intersection1.intersectionRatio < 0.8 ? fadeOut(".fadeIn"): fadeIn(".fadeIn")
+  intersection2 && intersection2.intersectionRatio < 0.5 ? fadeOut(".fadeIn2"): fadeIn(".fadeIn2")
+  intersection3 && intersection3.intersectionRatio < 0.5 ? fadeOut(".fadeIn3"): fadeIn(".fadeIn3")
+
+
+
   return (
-    <div className="Home">
-        <div style={styles.section}>
+    <div className="Home" >
+        <div style={styles.section} ref = {section1}>
+        <div>
         <div style={{backgroundColor:colors.secondary.background}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display:"block"}}><path fill={colors.primary.background} fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,197.3C320,181,400,139,480,138.7C560,139,640,181,720,176C800,171,880,117,960,117.3C1040,117,1120,171,1200,213.3C1280,256,1360,288,1400,304L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </div>
-          <div style={styles.heading}>
+          <div style={styles.heading} className="fadeIn">
           👋 Hi, I’m Apoorv Kansal
           </div>
-          <div style={styles.caption}>
+          <div style={styles.caption} className="fadeIn">
           I design stuff for Web, Mobile and work on ML/ DL models.
           </div>
-          <div>
+          <div className="fadeIn" >
             <div style={{display:"flex", justifyContent:"space-evenly", "marginTop":"3%" }}>
               <div style={{flexGrow:2}}>
 
@@ -92,18 +147,23 @@ function Home() {
             </div>
           </div>
         </div>
-        <div style={styles.section}>
+        </div>
+        <div style={styles.section} ref = {section2}>
         <div style = {{ paddingLeft:"10%", zIndex:2, height:"100%"}}>
           <div style= {{ display:'flex', height:"100%"}}>
             <div style= {{ flex: 4, paddingTop:"5%"}}>
-              <Heading label="About Me"/>
-              <div style={{paddingTop:"9%"}}>
+              <div className="fadeIn2">
+                <Heading label="About Me"/>
+              </div>
+              <div >
+              <div style={{paddingTop:"9%"}} className="fadeIn2">
                 <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.66 CGPA. My subject of study is Electronics and Communication Engineering."/>
               </div>
-              <div>
+              <div className="fadeIn2">
                 <Para text="But my love resides with coding. I’ve always tried to bridge the gap between coding and designing. I have worked on many projects and managed teams. Check out my stack for all the languages I code in and check out my resume for info."/>
               </div>
-              <div style={{marginTop:"7%", display:"flex"}}>
+              </div>
+              <div style={{marginTop:"7%", display:"flex"}} className="fadeIn2">
                 <div style={{marginRight:"5%"}}>
                   <Button type="contained" label="My Stack" />
                 </div>
@@ -112,8 +172,8 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div style={{flex:4, display:'flex', justifyContent:'center', alignItems:'center'}}>
-              <img src={photo} style={{maxHeight:360, "filter":"drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4))","borderRadius":"25px", zIndex:3}}/>
+            <div style={{flex:4, display:'flex', justifyContent:'center', alignItems:'flex-start'}}>
+              <img src={photo} style={{maxHeight:360, "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"25px", zIndex:3}}/>
             </div>
           </div>
         </div>
@@ -121,12 +181,13 @@ function Home() {
               <img src={AboutMeBlob} style={{position:"absolute", right:0, top:0,height:"100vh", width:"40%" }}/>
                 
         </div>
-        <div style={styles.section}>
+        <div style={styles.section} ref = {section3}>
             <div style = {{paddingLeft:"10%", zIndex:2, height:"100%"}}>
               <div style= {{ display:'flex', height:"100%"}}>
-                <div style= {{ flex: 4, paddingTop:"5%"}}>
+                <div style= {{ flex: 4, paddingTop:"5%"}} className="fadeIn3">
                   <Heading label="My Stack"/>
-                  <div style={{paddingTop:"9%"}}>
+                  <div>
+                  <div style={{paddingTop:"9%"}} >
                     <Para text="Depending on the application I like to code in different languages."/>
                   </div>
                   <div>
@@ -134,6 +195,7 @@ function Home() {
                   </div>
                   <div>
                     <Para text="After all, if you know the basics, learning a new language is a cake walk."/>
+                  </div>
                   </div>
                 </div>
                 <div style= {{ flex:4.5, marginLeft:"10%", paddingTop:"4%",paddingBottom:"5%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>

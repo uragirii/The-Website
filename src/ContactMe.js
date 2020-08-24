@@ -30,7 +30,7 @@ function ContactMe() {
       </svg>
       <div style={{paddingTop:"5%", paddingRight:"5%"}}>
         <Heading label="Contact Me"/>
-        <Para text="I would love to talk to you and even work for you. I'm currently looking for work. Just fill the form below and I will reply you in 24 hours."/>
+        <Para text="I would love to talk to you and even work for you. I'm currently looking for work. Just fill the form below and I will reply to you in 24 hours."/>
         <div style={{display:'flex', paddingTop:"5%"}}>
           <div style={styles.textInput}>  
             <TextInput placeholder="Name" val={(v)=>{console.log(v)}} style={{display:'flex', justifyContent:'center'}}/>

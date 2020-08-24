@@ -12,7 +12,7 @@ const styles = {
       "textDecoration": "none",
       "width": "130",
       "color": "#000",
-      "filter": "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4))"
+      "filter": "drop-shadow(0px 4px 4px #000000);"
     },
     "text": {
       "fontFamily": "Consolas",
@@ -57,7 +57,7 @@ const styles = {
       "justifyContent": "center",
       "textDecoration": "none",
       "color": "#F4F1F1",
-      "filter": "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4))"
+      "filter": "drop-shadow(0px 4px 4px #000000);"
     },
     "disabled": {
       "background": "#e5e5e5",
