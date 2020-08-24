@@ -26,7 +26,7 @@ Right now I'm using a Perfect White for Headings and slight Off White(#F4F1F1) f
 
 I used `React JS` to make the website and then used Firebase Hosting to Host the website. But along with `React JS` following things have significantly helped in the process.
 
-- `GSAP` and `useIntersection` : The animations on scoll is provided using GSAP 3.0 and using a custom hook : 'useIntersection`. If you want to know what `useIntersection` is read about [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+- `GSAP` and `useIntersection` : The animations on scoll is provided using GSAP 3.0 and using a custom hook : `useIntersection`. If you want to know what `useIntersection` is read about [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 - Figma : I can't stress this enough but using Figma for designing the website beforehand significantly reduced my developement time. I will share Figma Project for this website in future. Check out Figma [here](https://www.figma.com/).
 - Helpful Community : I just love programming community on Reddit, StackOverflow, Medium, YouTube etc. There numerous tutorials and articles have helped in solving made bugs.
 
