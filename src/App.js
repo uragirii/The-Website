@@ -4,6 +4,7 @@ import { Heading, Button, Para, TextInput, TextArea, ProjectsBar } from "./compo
 import ContactMe from "./ContactMe"
 import Projects from "./Projects"
 import Home from "./Home"
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 const styles = {
@@ -36,13 +37,16 @@ const styles = {
   }
   
 }
-// TODO: ADD LOGOS AND SHRINK THE SIZE
-function App() {
+function App(){
   return (
     <div className="App">
-      <Home/>
+      <Switch>
+        <Route path="/" component={Home} exact/> 
+        <Route path="/contact" component={ContactMe} exact/> 
+        <Route path="/projects" component={Projects} exact/> 
+      </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
