@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The Website
 
-## Available Scripts
+This is my Personal Porfolio-Website to showcase my talent in CSS, React and Web Development along with my other projects.
 
-In the project directory, you can run:
+Right now it is in very early stage and I've just deployed it to check my Load times and other things. Right now I'm using Firebase Hosting to host the website.
 
-### `yarn start`
+Visit Website Here : [apoorv.web.app](http://apoorv.web.app/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+(_Please use Desktop to visit as I have not designed to Mobile use yet_)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## The Details
 
-### `yarn test`
+The behind-the-scenes stuff and other things.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Color Palette
 
-### `yarn build`
+At first I decided to make a dark mode toggle but I love Dark mode and decided to set it as default mode of the website.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The background is dark blue-black color : #0D0416 
+The foreground is a bright pinkish color and I slightly mixed my background to make it darker : #D50056
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Right now I'm using a Perfect White for Headings and slight Off White(#F4F1F1) for secondary. I intend to change it in the future.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Technical Stuff
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I used `React JS` to make the website and then used Firebase Hosting to Host the website. But along with `React JS` following things have significantly helped in the process.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `GSAP` and `useIntersection` : The animations on scoll is provided using GSAP 3.0 and using a custom hook : 'useIntersection`. If you want to know what `useIntersection` is read about [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+- Figma : I can't stress this enough but using Figma for designing the website beforehand significantly reduced my developement time. I will share Figma Project for this website in future. Check out Figma [here](https://www.figma.com/).
+- Helpful Community : I just love programming community on Reddit, StackOverflow, Medium, YouTube etc. There numerous tutorials and articles have helped in solving made bugs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Future Plans
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `0.0alphaK`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
 
-## Learn More
+After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## I found something wrong
 
-### Code Splitting
+If you have found a bug, some glitch in UI / UX, please open an Issue. If possible do provide a screenshot. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+If you want to help add a feature, sorry I want to develop this website completly on my own. I hope you respect that. But at the same time I'm available for your suggestions. Please open an Issue describing your feature(s). Thanks.
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+[Visit the website here](http://apoorv.web.app/). I hope you love it. If hate something or if I've done something wrong [email me](mailto:apoorvkansalak@gmail.com) and I will try to fix it.
