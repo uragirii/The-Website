@@ -32,7 +32,7 @@ I used `React JS` to make the website and then used Firebase Hosting to Host the
 
 ### Future Plans
 
-I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `0.0alphaK`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.0alphaK`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
 
 After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
 
