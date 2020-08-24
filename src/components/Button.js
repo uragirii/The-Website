@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-
+import colors from '../colors'
 
 const styles = {
     "container": {
-      "background": "#FF0066",
+      "background": colors.secondary.background,
       "border": "1px solid rgba(255, 0, 102, 0.99)",
       "boxSizing": "border-box",
       "padding": "4px",
@@ -24,7 +24,7 @@ const styles = {
       "margin": "4px",
       "marginRight": "1em",
       "marginLeft": "1em",
-      "color": "#F4F1F1",
+      "color": colors.primary.text,
       "textDecoration": "none"
     },
     "outlined": {
@@ -34,7 +34,7 @@ const styles = {
       "display": "flex",
       "justifyContent": "center",
       "textDecoration": "none",
-      "color": "#FF0066"
+      "color": colors.secondary.background
     },
     "outlined_text": {
       "fontFamily": "Consolas",
@@ -49,7 +49,7 @@ const styles = {
       "textDecoration": "none"
     },
     "outlined_hover": {
-      "background": "#FF0066",
+      "background": colors.secondary.background,
       "border": "2px solid rgba(255, 0, 102, 0.99)",
       "boxSizing": "border-box",
       "padding": "4px",

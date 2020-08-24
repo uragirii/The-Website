@@ -136,10 +136,10 @@ function Home() {
 
               </div>
               <div style={{marginRight:"5%"}}>
-                <Button type="contained" label="My Projects" />
+                <Button type="contained" label="My Projects" href="/projects" />
               </div>
               <div >
-                <Button type="outlined" label="Contact Me" />
+                <Button type="outlined" label="Contact Me" href="/contact" />
               </div>
               <div style={{flexGrow:2}}>
                   
@@ -165,7 +165,7 @@ function Home() {
               </div>
               <div style={{marginTop:"7%", display:"flex"}} className="fadeIn2">
                 <div style={{marginRight:"5%"}}>
-                  <Button type="contained" label="My Stack" />
+                  <Button type="contained" label="My Stack" href="#stack" />
                 </div>
                 <div >
                   <Button type="outlined" label="Resume" />
@@ -181,7 +181,7 @@ function Home() {
               <img src={AboutMeBlob} style={{position:"absolute", right:0, top:0,height:"100vh", width:"40%" }}/>
                 
         </div>
-        <div style={styles.section} ref = {section3}>
+        <div style={styles.section} ref = {section3} id="stack">
             <div style = {{paddingLeft:"10%", zIndex:2, height:"100%"}}>
               <div style= {{ display:'flex', height:"100%"}}>
                 <div style= {{ flex: 4, paddingTop:"5%"}} className="fadeIn3">
