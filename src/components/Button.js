@@ -24,7 +24,7 @@ const styles = {
       "margin": "4px",
       "marginRight": "1em",
       "marginLeft": "1em",
-      "color": colors.primary.text,
+      "color": colors.secondary.text,
       "textDecoration": "none"
     },
     "outlined": {
@@ -46,7 +46,8 @@ const styles = {
       "margin": "4px",
       "marginRight": "1em",
       "marginLeft": "1em",
-      "textDecoration": "none"
+      "textDecoration": "none",
+      "color": colors.secondary.text,
     },
     "outlined_hover": {
       "background": colors.secondary.background,

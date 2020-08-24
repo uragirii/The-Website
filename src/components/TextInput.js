@@ -6,14 +6,13 @@ const styles =  {
         "backgroundColor":"#E5E5E5",
         "border":"2px solid #c4c4c4",
         "borderRadius":7,
-        "fontFamily":"Consolas",
+        "fontFamily":"Montserrat",
         "fontStyle":"normal",
         "fontWeight":"normal",
         "fontSize":"14px",
         "lineHeight":"16px",
         "display":"flex",
         "alignItems":"center",
-        "letterSpacing":"0.09em",
     },
     "focussed" : {
         "outlineColor" : "#FF0066",
@@ -21,14 +20,15 @@ const styles =  {
         "backgroundColor":"#E5E5E5",
         "border":"2px solid #FF0066",
         "borderRadius":7,
-        "fontFamily":"Consolas",
+        "fontFamily":"Montserrat",
         "fontStyle":"normal",
         "fontWeight":"normal",
-        "fontSize":"14px",
-        "lineHeight":"16px",
         "display":"flex",
         "alignItems":"center",
-        "letterSpacing":"0.09em",
+      "filter": "drop-shadow(0px 4px 4px #FF0066);",
+      "outlineStyle" : "none"
+
+        // "letterSpacing":"0.09em",
      },
      "error": {
         "color" : "red",
@@ -84,6 +84,7 @@ function TextInput({placeholder, type, val, style}) {
     val(value)
 
     return (
+        <div>
         <div style={style}>
           <input 
             type={type} 
@@ -95,7 +96,8 @@ function TextInput({placeholder, type, val, style}) {
             onChange={changeVal}
             size="30"
             />
-            {errorlabel}
+        </div>
+        <div style={{...style, paddingTop:"1%"}}>{errorlabel}</div>
         </div>
     )
 }

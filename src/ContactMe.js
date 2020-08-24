@@ -37,11 +37,15 @@ function ContactMe() {
             <TextInput placeholder="Email" val={(v)=>{console.log(v)}} type="email" style={{display:'flex', justifyContent:'center'}}/>
           </div>
           <div style={{display:'flex', justifyContent:'center', flex:1}}>
-            <TextArea placeholder="Reason to contact" val ={(v) => {console.log(v)}} />
+            <TextArea placeholder="Message" val ={(v) => {console.log(v)}} />
           </div>
         </div>
+        
         <div style={{display:'flex', justifyContent:'center', paddingTop:"2%"}}>
           <Button type="contained" label="Submit" />
+        </div>
+        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
+          <p>A copy of response will be sent to your Email ID.</p>
         </div>
         <div style={{paddingTop:"5%"}}>
         </div>
