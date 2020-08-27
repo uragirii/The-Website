@@ -157,7 +157,7 @@ function Home() {
               </div>
               <div >
               <div style={{paddingTop:"9%"}} className="fadeIn2">
-                <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.66 CGPA. My subject of study is Electronics and Communication Engineering."/>
+                <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.69 CGPA. My subject of study is Electronics and Communication Engineering."/>
               </div>
               <div className="fadeIn2">
                 <Para text="But my love resides with coding. I’ve always tried to bridge the gap between coding and designing. I have worked on many projects and managed teams. Check out my stack for all the languages I code in and check out my resume for info."/>

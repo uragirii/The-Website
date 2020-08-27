@@ -1,0 +1,26 @@
+.dots {
+    align-self: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: flex;
+  }
+  .dots li {
+    margin-right: 6px;
+  }
+  .dots li:before {
+    content: '';
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .dots li.active:before {
+    width: 30px;
+    background: #fc0;
+  }

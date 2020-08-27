@@ -98,12 +98,12 @@ export class Button extends Component {
     }
 
     render() {
-        const {type, label, href, disabled} = this.props
+        const {type, label, href, disabled, css} = this.props
         
         if (type==="disabled" || disabled){
             // TODO: Add tooltip
             return (
-                <a style={styles.disabled} {...{...this.props}}>
+                <a style={{...styles.disabled, ...css}} {...{...this.props}}>
                     <div  style={styles.disabled_text}>
                         {label}
                     </div>
@@ -113,7 +113,7 @@ export class Button extends Component {
 
         if (type === "contained"){
             return (
-                <a style={styles.container} href={href} {...{...this.props}}>
+                <a style={{...styles.container, ...css}} href={href} {...{...this.props}}>
                     <div  style= {styles.text}>
                         {label}
                     </div>
@@ -123,7 +123,7 @@ export class Button extends Component {
         if (type === "outlined"){
             return (
                 <a  
-                style={this.hoverStyles(styles.outlined, styles.outlined_hover)} 
+                style={{...this.hoverStyles(styles.outlined, styles.outlined_hover), ...css}} 
                 href={href} 
                 onMouseOver={()=>{this.setState({hovered: true})}} 
                 onMouseOut={()=>{this.setState({hovered: false})}}
