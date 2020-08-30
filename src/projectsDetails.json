@@ -139,7 +139,77 @@
             }
             ]
           },
-        "app" : {},
+        "app" : {
+            "count" : 3,
+            "headings" : ["VITask", "Hello Doctor","ChatApp"],
+            "images" : [],
+            "details": [
+              [
+                  "Specifically designed for VITians at Chennai Campus. This is one of my dream projects I wanted to do from my 1st year and I finally got chance to do in 3rd year.",
+                  "A complete suite of Apps and Websites for Students of VIT Chennai to check attendance and assignments in one place. Got more than 250 downloads in just 2 days of beta launch."
+              ],
+              [
+                  "One more App  dedicated to VITians, this app is also a part of my project \"Hello Doctor\" in which students can get prescription from doctors without leaving the hostel.",
+                  "This App was designed just before COVID-19 and fortunately could help in future as many simple diseases can be cured by just talking to Doctor and getting prescriptions. This limits physical interaction."
+              ],
+              [
+                  "This is the \"First\" App made using React Native and Firebase. The concept is simple and so is the UI.",
+                  "It is a simple anonymous chatting App, anyone can create a Room and you are get to go. Rooms can be password protected. It is just another messaging app with anonymity."
+              ]
+            ],
+            "buttons": [
+              {
+                  "forProject" : "VITask",
+                  "data" : [
+                      {
+                          "type": "contained",
+                          "tooltip" : "Download App from website",
+                          "label" : "Download",
+                          "href" : "https://vitask.me/downloads"
+                      },
+                      {
+                          "type" : "outlined",
+                          "tooltip" : "Visit the website and see more",
+                          "label" : "Visit",
+                          "href" : "https://vitask.me/"
+                      }
+                  ]
+              },
+              {
+                "forProject" : "Hello Doctor",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Currently APK is unavailable. Sorry.",
+                        "label" : "Download",
+                        "href" : null
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "See the Github repo",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/tarp"
+                    }
+                ]
+            },{
+                "forProject" : "ChatApp",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Download the APK",
+                        "label" : "Download",
+                        "href" : "https://drive.google.com/open?id=1784NbxigZISW0gm00-bHqKNjezRbDBQu"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "Visit the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/chatapp"
+                    }
+                ]
+            }
+            ]
+          },
         "ml-dl" : {},
         "other" : {}
     },

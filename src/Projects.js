@@ -38,6 +38,8 @@ const styles = {
 
 function Projects() {
   projectsDetails['projects']["web"]['images'].push(iete)
+  projectsDetails['projects']["app"]['images'].push(iete)
+
   document.title = "Apoorv Kansal | Projects"
     return (
         <div>
@@ -54,90 +56,11 @@ function Projects() {
       <div style={styles.caption}>
         Scroll down to view my projects in different domains
       </div>
-      {/* <div style={{display:'flex', justifyContent:"center", paddingTop:"3%"}}>
-      <span style={{flexShrink:0}}>
-                Web Dev
-            </span>
-            <span style={{flexShrink:0}}>
-                App Dev
-            </span>
-            <span style={{flexShrink:0}}>
-                ML / DL
-            </span>
-            <span style={{flexShrink:0}}>
-                Other Things
-            </span>
-      </div> */}
       </div>          
           <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} />
-          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} flip/>
-          {/* <div style={styles.section}>
-            <div style={{display:"flex", height:"100vh"}}>
-            <div style={{width:"50vw", paddingTop:"12%", paddingLeft:"15%"}}>
-              <div>
-              <Heading label="VITask"/>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Developed both Front End and Back End of the website for IETE. A portal for registering Symposiums and uploading Research Papers to IETE Horizon"/>
-              </div>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Equipped with powerful search option a user can also search papers among wide selection of Research Papers. The website is currently being tested in beta mode."/>
-              </div>
-              </div>
-            </div>
-            <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-              <img src={iete}/>              
-            </div>
-            
-            <div style={{position:"absolute", left:0, bottom:"50%", transform:"rotate(-270deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
-              App
-            </div>
-            </div>
-          </div> */}
-          {/* <div style={styles.section}>
-            <div style={{display:"flex", height:"100vh"}}>
-            <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-              <img src={iete}/>              
-            </div>
-            <div style={{width:"50vw", paddingTop:"12%"}}>
-              <div>
-              <Heading label="Image Matting"/>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Worked along side with metors from Samsung to develop a model to seperate the Foreground, Background and alpha from the Image."/>
-              </div>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Collected Dataset and then made the model in PyTorch based on ResNet-50. Worked along with 2 of my collegues on this project."/>
-              </div>
-              </div>
-            </div>
-            <div style={{position:"absolute", right:"-5%", bottom:"40%", transform:"rotate(-90deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
-              ML / DL
-            </div>
-            </div>
-          </div> */}
-          <ProjectCrousel {...projectsDetails['projects']["web"]}/>
-
-          <div style={styles.section}>
-            <div style={{display:"flex", height:"100vh"}}>
-            <div style={{width:"60vw", paddingTop:"10%", paddingLeft:"15%"}}>
-              <div>
-              <Heading label="r/Animemes Viva La Revolution"/>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="On 3rd August 2020, Mods of r/Animemes banned the word 'Trap' from the subbreddit. It was implemented effective immediately without consulting the community. This made members of r/Animemes community very angry."/>
-              </div>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="I wondered if it was difficult for mods to implement a ban based on used of the word. So I wrote a Python script to get all the comments and posts with various words and plotted the grap using matplotlib."/>
-              </div>
-              </div>
-            </div>
-            <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-              <img src={iete}/>              
-            </div>
-            
-            <div style={{position:"absolute", left:"-5%", bottom:"50%", transform:"rotate(-270deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
-              Other
-            </div>
-            </div>
-          </div>
+          <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip/>
+          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"ML"} />
+          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Other"} flip/>
         </div>
     )
 }
