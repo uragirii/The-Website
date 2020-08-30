@@ -210,8 +210,232 @@
             }
             ]
           },
-        "ml-dl" : {},
-        "other" : {}
+        "ml-dl" : {
+            "count" : 4,
+            "headings" : ["Image Matting", "Friends Generator","Real Time Twitter Analysis", "Miscellaneous"],
+            "images" : [],
+            "details": [
+              [
+                  "This project was assigned to me after getting selected in Samsung PRISM programme. Samsung Mentors gave guidance and even gave us inputs to work in particular direction.",
+                  "Developed a model in PyTorch to seperate Foreground, Background and Alpha Matte of the given image. Dataset was collected, annotated and then a custom tailored model was trained."
+              ],
+              [
+                  "This was the \"Hello World\" Project in the field of RNN for me. I was amazed on how accurate even 1-2 layer RNN models were. I even compiled the model in JavaScript so that it can run in Browser",
+                  "I trained 3 different models on the Friends TV Show Transcript and then asked the model to generate a new script, given a starting dialogue. Suprisingly, even simple models performed great."
+              ],
+              [
+                  "This was project was made after I completed my certification of Machine Learning. This project does as the name suggests, it helps to analyse Twitter's sentiment on a topic at a particular time",
+                  "The script takes a sample of 100 tweets queried according to search term and then run NLP to figure out the sentiments of people tweeting. Then represents it in a neat Pie Chart."
+              ],
+              [
+                  "This project contains some of the mini projects that I did during my training time for Machine Learning. I've clubbed all the projects together as they are just simple scripts.",
+                  "These mini-projects helped me gain the understanding on how a particular algorithm works and where to use which algorithm etc."
+              ]
+            ],
+            "buttons": [
+              {
+                  "forProject" : "Image Matting",
+                  "data" : [
+                      {
+                          "type": "contained",
+                          "tooltip" : "Not allowed to share project details.",
+                          "label" : "Github",
+                          "href" : null
+                      },
+                      {
+                          "type" : "outlined",
+                          "tooltip" : "Not allowed to share project details.",
+                          "label" : "More",
+                          "href" : null
+                      }
+                  ]
+              },
+              {
+                "forProject" : "Friends Generator",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Run model in browser",
+                        "label" : "Visit",
+                        "href" : "https://uragirii.github.io/Friends-Generator/"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "See the Github repo",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/friend-generator"
+                    }
+                ]
+            },{
+                "forProject" : "Real Time Twitter Analysis",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/Real-Time-Twitter-Analysis"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/Real-Time-Twitter-Analysis"
+                    }
+                ]
+            },{
+                "forProject" : "Miscellanous",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/Machine-Learning-Practice"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/Machine-Learning-Practice"
+                    }
+                ]
+            }
+            ]
+          },
+        "other" : {
+            "count" : 4,
+            "headings" : ["r/Animemes Viva La Revolution", "VITask","VTOP_Captcha", "anyme-dl", "Jut", "WallpyScrapy"],
+            "images" : [],
+            "details": [
+              [
+                  "On 3rd August 2020, Mods of r/Animemes banned the word 'Trap'. It was implemented effective immediately without consulting the community which made members of r/Animemes community very angry.",
+                  "So, I decided to plot the graph of the word \"Trap\" used in the past month in comments and posts on r/Animemes."
+              ],
+              [
+                  "Yes, this project again. I wrote custom scraping scripts that run at the backend to get the data from the VIT's server.",
+                  "I even figured out their API and made an API on top of it. Then I combined this API with the Moodle API which I made to get all the assignments and attendance at one place."
+              ],
+              [
+                  "This was a simple project to check my Image Processing skills. I wanted to break my University's Login Captcha without using Machine Learning.",
+                  "This project was then clubbed with VITask. Now, VITCC has switched its portal but I've also written a custom captcha breaker for that too. But that is currently used in VITask."
+              ],
+              [
+                  "It was also one of my dream projects that I wanted to work on. This project helped quite to understand Web Scraping. I scraped the Anime Websites to download Episodes.",
+                  "I even recieved appreciation from Anime community for this project, but shortly the project died as the website died too. But it was fun while it lasted."
+              ],
+              [
+                  "This was my attempt to write a Python CLI utility to help me in managing my projects and even keep my thoughts sorted. ",
+                  "It could manage git, and even maintained TODO tasks and assigned priority accordingly. Although I used it in some of my projects, I switched to VS Code's extensions"
+              ],
+              [
+                  "A simple but very useful project. I love browsing Reddit and also love the wallpapers people post on different subreddits. I wanted to write a custon cron script that ran and downloaded the wallpapers.",
+                  "Its more than just that. You can download different images, set your preferences of the subreddit. I even upvote all the posts to show a thanks for the posters."
+              ]
+            ],
+            "buttons": [
+              {
+                  "forProject" : "r/Animemes Viva La Revolution",
+                  "data" : [
+                      {
+                          "type": "contained",
+                          "tooltip" : "See Github Repo",
+                          "label" : "Github",
+                          "href" : "https://github.com/uragirii/r-Animemes-Viva-La-Revolution"
+                      },
+                      {
+                          "type" : "outlined",
+                          "tooltip" : "My inferences",
+                          "label" : "More",
+                          "href" : "https://github.com/uragirii/r-Animemes-Viva-La-Revolution#my-findings"
+                      }
+                  ]
+              },
+              {
+                "forProject" : "VITask",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Download App from website",
+                        "label" : "Download",
+                        "href" : "https://vitask.me/downloads"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "Visit the website and see more",
+                        "label" : "Visit",
+                        "href" : "https://vitask.me/"
+                    }
+                ]
+            },
+            {
+                "forProject" : "VTOP_Captcha",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/vtop_captcha"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/vtop_captcha"
+                    }
+                ]
+            },
+            {
+                "forProject" : "anyme-dl",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/anyme-dl"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/anyme-dl#usage"
+                    }
+                ]
+            },
+            {
+                "forProject" : "Jut",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/jut"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/jut"
+                    }
+                ]
+            },
+            {
+                "forProject" : "WallpyScrapy",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "See the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/WallpyScrapy"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More details",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/WallpyScrapy#wallpyscrapy"
+                    }
+                ]
+            }
+            ]
+          }
     },
     "remarks" : "Contains the details of all the projects to be displayed in The Website"
 }

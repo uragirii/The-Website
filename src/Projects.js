@@ -39,6 +39,8 @@ const styles = {
 function Projects() {
   projectsDetails['projects']["web"]['images'].push(iete)
   projectsDetails['projects']["app"]['images'].push(iete)
+  projectsDetails['projects']["ml-dl"]['images'].push(iete)
+  projectsDetails['projects']["other"]['images'].push(iete)
 
   document.title = "Apoorv Kansal | Projects"
     return (
@@ -59,8 +61,8 @@ function Projects() {
       </div>          
           <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} />
           <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip/>
-          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"ML"} />
-          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Other"} flip/>
+          <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} />
+          <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip/>
         </div>
     )
 }
