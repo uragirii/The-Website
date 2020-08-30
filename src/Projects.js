@@ -113,7 +113,7 @@ function Projects() {
             </div>
             </div>
           </div>
-          <div style={styles.section}>
+          {/* <div style={styles.section}>
             <div style={{display:"flex", height:"100vh"}}>
             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
               <img src={iete}/>              
@@ -133,7 +133,9 @@ function Projects() {
               ML / DL
             </div>
             </div>
-          </div>
+          </div> */}
+          <ProjectCrousel {...projectsDetails['projects']["web"]}/>
+
           <div style={styles.section}>
             <div style={{display:"flex", height:"100vh"}}>
             <div style={{width:"60vw", paddingTop:"10%", paddingLeft:"15%"}}>
