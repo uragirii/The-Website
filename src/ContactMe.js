@@ -49,7 +49,7 @@ function ContactMe() {
           <Button type="contained" label="Submit" />
         </div>
         <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
-          <p>A copy of response will be sent to your Email ID.</p>
+          <p>A copy of the response will be sent to your Email ID.</p>
         </div>
         <div style={{paddingTop:"5%"}}>
         </div>

@@ -56,8 +56,8 @@ function TextInput({placeholder, type, val, style}) {
     const [err, setErr] = React.useState("")
 
     const changeVal = (e)=>{
-        if (type ==="email" && e.target.value!=""){
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (type ==="email" && e.target.value!==""){
+            const re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if(!re.test(String(value).toLowerCase())){
                 setErr("Invalid Email Address")
                 setValue(e.target.value)

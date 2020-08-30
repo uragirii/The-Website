@@ -1,5 +1,4 @@
 import React from 'react'
-import { Heading, Button, Para, TextInput, TextArea, ProjectsBar } from "./components/index";
 import iete from "./assests/IETE.png"
 import colors from "./colors"
 import projectsDetails from './projectsDetails'
@@ -53,7 +52,7 @@ function Projects() {
         
       </div>
       <div style={styles.heading}>
-        📝 My Projects
+        <span role="img" aria-label="Projects Emoji">📝</span> My Projects
       </div>
       <div style={styles.caption}>
         Scroll down to view my projects in different domains

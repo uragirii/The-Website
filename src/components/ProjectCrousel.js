@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 import { Heading, Button, Para } from "./index";
-import iete from "../assests/IETE.png"
 import colors from "../colors"
 import SliderDots from './SliderDots'
 
@@ -45,7 +44,7 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                     <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
                         <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
                             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-                                <img src={images[0]}/>              
+                                <img src={images[0]} alt="Project"/>              
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center"}}>
                                 <div>
@@ -95,7 +94,7 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                             </div>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center", paddingLeft:"10%"}}>
-                                <img src={images[0]}/>              
+                                <img src={images[0]} alt="Project"/>              
                             </div>
                         </div>
                         <div style={{ color:"white", display:'flex', justifyContent:"center"}}>

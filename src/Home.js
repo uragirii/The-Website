@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 // import './App.css';
 import { Heading, Button, Para } from "./components/index";
 
@@ -26,7 +26,6 @@ const styles = {
     "fontSize": "36px",
     "lineHeight": "44px",
     "letterSpacing": "0.07em",
-    "color": "#000000",
     "textAlign" : "center",
     "color" : colors.primary.text,
   },
@@ -36,7 +35,6 @@ const styles = {
     "fontWeight": "bold",
     "fontSize": "18px",
     "lineHeight": "21px",
-    "color": "rgba(0, 0, 0, 0.5)",
     "textAlign" : "center",
     "marginTop" : "3%",
     "color" : colors.secondary.text,
@@ -125,7 +123,7 @@ function Home() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display:"block"}}><path fill={colors.primary.background} fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,197.3C320,181,400,139,480,138.7C560,139,640,181,720,176C800,171,880,117,960,117.3C1040,117,1120,171,1200,213.3C1280,256,1360,288,1400,304L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </div>
           <div style={styles.heading} className="fadeIn">
-          👋 Hi, I’m Apoorv Kansal
+          <span role="img" aria-label="Hand Wave Emoji">👋</span> Hi, I’m Apoorv Kansal
           </div>
           <div style={styles.caption} className="fadeIn">
           I design stuff for Web, Mobile and work on ML/ DL models.
@@ -173,12 +171,12 @@ function Home() {
               </div>
             </div>
             <div style={{flex:4, display:'flex', justifyContent:'center', alignItems:'flex-start'}}>
-              <img src={photo} style={{maxHeight:360, "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"25px", zIndex:3}}/>
+              <img src={photo} style={{maxHeight:360, "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"25px", zIndex:3}} alt="Apoorv"/>
             </div>
           </div>
         </div>
 
-              <img src={AboutMeBlob} style={{position:"absolute", right:0, top:0,height:"100vh", width:"40%" }}/>
+              <img src={AboutMeBlob} style={{position:"absolute", right:0, top:0,height:"100vh", width:"40%" }} alt="Blob"/>
                 
         </div>
         <div style={styles.section} ref = {section3} id="stack">
@@ -205,7 +203,7 @@ function Home() {
                       <div style={{flex:1, paddingLeft:"5%"}}>
                         <div style={{...styles.lang, display:'flex', justifyContent:'flex-start', alignContent:"center"}} >
                           <div>
-                            <img src={jslogo} style={{maxWidth:20,marginRight:5}}/>
+                            <img src={jslogo} style={{maxWidth:20,marginRight:5}} alt="JS Logo"/>
                           </div>
                           <div>
                             JavaScript
@@ -258,7 +256,7 @@ function Home() {
               </div>
             </div>
             
-            <img src={StackBlob} style={{position:"absolute", width:"50%", right:0, top:-4,height:"100vh"}}/>
+            <img src={StackBlob} style={{position:"absolute", width:"50%", right:0, top:-4,height:"100vh"}} alt="blob"/>
         </div>
         {/* Footer */}
         <div style={{background:"#272A2C", marginTop:-12, zIndex:2}}>

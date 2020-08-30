@@ -15,10 +15,8 @@ const styles = {
         "fontWeight": "bold",
         "fontSize": "18px",
         "lineHeight": "21px",
-        "display": "flex",
         "alignItems": "center",
         "textAlign": "center",
-        "color": "#000000",
         "justifyContent": "space-around"
       }
 }
