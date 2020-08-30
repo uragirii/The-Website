@@ -56,8 +56,8 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                                         <Para text={details?details[index][1]:"Details not found"}/>
                                     </div>
                                     <div style={{width:"70%", paddingTop:"5%", display:"flex"}}>
-                                        <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}}/>
-                                        <Button type="outlined" label={buttons[index]['data'][1]['label']} />
+                                        <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}} href={buttons[index]['data'][0]['href']} tooltip={buttons[index]['data'][0]['tooltip']}/>
+                                        <Button type="outlined" label={buttons[index]['data'][1]['label']} href={buttons[index]['data'][1]['href']} tooltip={buttons[index]['data'][1]['tooltip']} />
                                     </div>
                                 </div>
                             </div>
@@ -88,8 +88,8 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                                     <Para text={details?details[index][1]:"Details not found"}/>
                                 </div>
                                 <div style={{width:"80%", paddingTop:"5%", display:"flex"}}>
-                                    <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}}/>
-                                    <Button type="outlined" label={buttons[index]['data'][1]['label']} />
+                                    <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}} href={buttons[index]['data'][0]['href']} tooltip={buttons[index]['data'][0]['tooltip']}/>
+                                    <Button type="outlined" label={buttons[index]['data'][1]['label']} href={buttons[index]['data'][1]['href']} tooltip={buttons[index]['data'][1]['tooltip']}/>
                                 </div>
                             </div>
                             </div>

@@ -166,7 +166,7 @@ function Home() {
                   <Button type="contained" label="My Stack" href="#stack" />
                 </div>
                 <div >
-                  <Button type="outlined" label="Resume" />
+                  <Button type="outlined" label="Resume" href="https://firebasestorage.googleapis.com/v0/b/the-website-ak.appspot.com/o/Resume_Updated.pdf?alt=media&token=59b3ef54-924f-4def-935b-8ccea7f391c1"/>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import colors from '../colors'
+import ReactTooltip from 'react-tooltip';
 
 const styles = {
     "container": {
@@ -98,7 +99,7 @@ export class Button extends Component {
     }
 
     render() {
-        const {type, label, href, disabled, css} = this.props
+        const {type, label, href, disabled, css, tooltip, onClick} = this.props
         
         if (type==="disabled" || disabled){
             // TODO: Add tooltip
@@ -112,28 +113,61 @@ export class Button extends Component {
         }
 
         if (type === "contained"){
-            return (
-                <a style={{...styles.container, ...css}} href={href} {...{...this.props}}>
-                    <div  style= {styles.text}>
-                        {label}
-                    </div>
-                </a>
-            )
+            if(href || onClick){
+                return (
+                    <a style={{...styles.container, ...css}} href={href} {...{...this.props}} onClick={onClick}>
+                        <div  style= {styles.text}>
+                            {label}
+                        </div>
+                    </a>
+                )
+            }
+            else{
+                return (
+                    <a style={{...styles.container, ...css, opacity:"0.4"}} href={href} {...{...this.props}} data-tip={tooltip}>
+                        <ReactTooltip textColor={colors.secondary.text} backgroundColor={colors.secondary.background} effect="solid" place="bottom" />
+                        <div  style= {styles.text}>
+                            {label}
+                        </div>
+                    </a>
+                )
+            }
         }
         if (type === "outlined"){
-            return (
-                <a  
-                style={{...this.hoverStyles(styles.outlined, styles.outlined_hover), ...css}} 
-                href={href} 
-                onMouseOver={()=>{this.setState({hovered: true})}} 
-                onMouseOut={()=>{this.setState({hovered: false})}}
-                {...{...this.props}}
-                 >
-                    <div style={styles.outlined_text} onMouseOver={()=>{this.setState({hovered: true})}}>
-                        {label}
-                    </div>
-                </a>
-            )
+            if(href || onClick){
+                return (
+                    <a  
+                    style={{...this.hoverStyles(styles.outlined, styles.outlined_hover), ...css}} 
+                    href={href} 
+                    onMouseOver={()=>{this.setState({hovered: true})}} 
+                    onMouseOut={()=>{this.setState({hovered: false})}}
+                    {...{...this.props}}
+                    onClick={onClick}
+                     >
+                        <div style={styles.outlined_text} onMouseOver={()=>{this.setState({hovered: true})}}>
+                            {label}
+                        </div>
+                    </a>
+                )
+            }
+            else{
+                return (
+                    <a  
+                    style={{...this.hoverStyles(styles.outlined, styles.outlined_hover), ...css, opacity:"0.4"}} 
+                    href={href} 
+                    onMouseOver={()=>{this.setState({hovered: true})}} 
+                    onMouseOut={()=>{this.setState({hovered: false})}}
+                    {...{...this.props}}
+                    data-tip={tooltip}
+                     >
+                        <ReactTooltip textColor={colors.secondary.text} backgroundColor={colors.secondary.background} effect="solid" place="bottom" />
+
+                        <div style={styles.outlined_text} onMouseOver={()=>{this.setState({hovered: true})}}>
+                            {label}
+                        </div>
+                    </a>
+                )
+            }
         }
         return(
             <div>Invalid type</div>

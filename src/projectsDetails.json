@@ -70,7 +70,7 @@
                     }
                 ]
             },{
-                "forProject" : "Friends Generatoe",
+                "forProject" : "Friends Generator",
                 "data" : [
                     {
                         "type": "contained",
@@ -97,7 +97,7 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "See More",
+                        "tooltip" : "Not Available",
                         "label" : "More",
                         "href" : null
                     }
@@ -131,7 +131,7 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "See More",
+                        "tooltip" : "Not Available",
                         "label" : "More",
                         "href" : null
                     }
@@ -255,15 +255,15 @@
                 "data" : [
                     {
                         "type": "contained",
-                        "tooltip" : "Run model in browser",
-                        "label" : "Visit",
-                        "href" : "https://uragirii.github.io/Friends-Generator/"
+                        "tooltip" : "Visit the Github Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/friend-generator"
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "See the Github repo",
+                        "tooltip" : "Run model in browser",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/friend-generator"
+                        "href" : "https://uragirii.github.io/Friends-Generator/"
                     }
                 ]
             },{
@@ -277,9 +277,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/Real-Time-Twitter-Analysis"
+                        "href" : null
                     }
                 ]
             },{
@@ -293,9 +293,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not Available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/Machine-Learning-Practice"
+                        "href" : null
                     }
                 ]
             }
@@ -377,9 +377,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not Available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/vtop_captcha"
+                        "href" : null
                     }
                 ]
             },
@@ -394,9 +394,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not Available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/anyme-dl#usage"
+                        "href" : null
                     }
                 ]
             },
@@ -411,9 +411,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not Available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/jut"
+                        "href" : null
                     }
                 ]
             },
@@ -428,9 +428,9 @@
                     },
                     {
                         "type" : "outlined",
-                        "tooltip" : "More details",
+                        "tooltip" : "Not Available",
                         "label" : "More",
-                        "href" : "https://github.com/uragirii/WallpyScrapy#wallpyscrapy"
+                        "href" : null
                     }
                 ]
             }
