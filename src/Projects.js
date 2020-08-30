@@ -38,6 +38,7 @@ const styles = {
 
 function Projects() {
   projectsDetails['projects']["web"]['images'].push(iete)
+  document.title = "Apoorv Kansal | Projects"
     return (
         <div>
           <div style={styles.section}>
@@ -67,31 +68,10 @@ function Projects() {
                 Other Things
             </span>
       </div> */}
-      </div>
+      </div>          
+          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} />
+          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} flip/>
           {/* <div style={styles.section}>
-            <div style={{display:"flex", height:"100vh"}}>
-            <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-              <img src={iete}/>              
-            </div>
-            <div style={{width:"50vw", paddingTop:"12%"}}>
-              <div>
-              <Heading label="IETE Horizon Website"/>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Developed both Front End and Back End of the website for IETE. A portal for registering Symposiums and uploading Research Papers to IETE Horizon"/>
-              </div>
-              <div style={{width:"70%", paddingTop:"5%"}}>
-                <Para text="Equipped with powerful search option a user can also search papers among wide selection of Research Papers. The website is currently being tested in beta mode."/>
-              </div>
-              </div>
-            </div>
-            <div style={{position:"absolute", right:0, bottom:"50%", transform:"rotate(-90deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
-              Web
-            </div>
-            </div>
-          </div> */}
-          
-          <ProjectCrousel {...projectsDetails['projects']["web"]}/>
-          <div style={styles.section}>
             <div style={{display:"flex", height:"100vh"}}>
             <div style={{width:"50vw", paddingTop:"12%", paddingLeft:"15%"}}>
               <div>
@@ -112,7 +92,7 @@ function Projects() {
               App
             </div>
             </div>
-          </div>
+          </div> */}
           {/* <div style={styles.section}>
             <div style={{display:"flex", height:"100vh"}}>
             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>

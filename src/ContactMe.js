@@ -22,7 +22,7 @@ const styles = {
 }
 // TODO: ADD Actual On submit 
 function ContactMe() {
-  
+  document.title = "Apoorv Kansal | Contact Me"
   return (
     <div className="Contact">
     <div style={styles.section}>
