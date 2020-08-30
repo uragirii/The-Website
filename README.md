@@ -1,8 +1,12 @@
+<p align="center">
+    <img src="./src/assests/favicon.png">
+</p>
+
 # The Website
 
 This is my Personal Porfolio-Website to showcase my talent in CSS, React and Web Development along with my other projects.
 
-Right now it is in very early stage and I've just deployed it to check my Load times and other things. Right now I'm using Firebase Hosting to host the website.
+Right now it is in early stage and I've just deployed it to check some things. Right now I'm using Firebase Hosting to host the website.
 
 Visit Website Here : [apoorv.web.app](http://apoorv.web.app/)
 
@@ -16,10 +20,13 @@ The behind-the-scenes stuff and other things.
 
 At first I decided to make a dark mode toggle but I love Dark mode and decided to set it as default mode of the website.
 
-The background is dark blue-black color : #0D0416 
-The foreground is a bright pinkish color and I slightly mixed my background to make it darker : #D50056
+The background is dark blue-black color : `#0D0416` 
 
-Right now I'm using a Perfect White for Headings and slight Off White(#F4F1F1) for secondary. I intend to change it in the future.
+The foreground is a bright pinkish color and I slightly mixed my background to make it darker : `#D50056`
+
+Right now I'm using a Perfect White for Headings and slight Off White(`#F4F1F1`) for secondary. I intend to change it in the future.
+
+Now I've also added favicon and improved all the project details.
 
 
 ### Technical Stuff
@@ -32,7 +39,7 @@ I used `React JS` to make the website and then used Firebase Hosting to Host the
 
 ### Future Plans
 
-I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.0alphaK`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.1alphaO`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
 
 After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
 
