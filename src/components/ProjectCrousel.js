@@ -76,27 +76,37 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
     }
     return (
         <div style={styles.section}>
-        <div style={{display:"flex", height:"100vh"}}>
-        <div style={{width:"50vw", paddingTop:"12%", paddingLeft:"15%"}}>
-          <div>
-          <Heading label={headings[index]}/>
-          <div style={{width:"70%", paddingTop:"5%"}}>
-            <Para text={details?details[index][0]:"Details not found"}/>
-          </div>
-          <div style={{width:"70%", paddingTop:"5%"}}>
-            <Para text={details?details[index][1]:"Details not found"}/>
-          </div>
-          </div>
-        </div>
-        <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-          <img src={images[0]}/>              
-        </div>
-        
-        <div style={{position:"absolute", left:0, bottom:"50%", transform:"rotate(-270deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
-          {title}
-        </div>
-        </div>
-      </div>
+                <div style={{display:"flex", height:"100%"}}>
+                    <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
+                        <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
+                            <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center", paddingLeft:"15%"}}>
+                            <div>
+                                <Heading label={headings[index]}/>
+                                <div style={{width:"80%", paddingTop:"2%"}}>
+                                    <Para text={details?details[index][0]:"Details not found"}/>
+                                </div>
+                                <div style={{width:"80%", paddingTop:"2%"}}>
+                                    <Para text={details?details[index][1]:"Details not found"}/>
+                                </div>
+                                <div style={{width:"80%", paddingTop:"5%", display:"flex"}}>
+                                    <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}}/>
+                                    <Button type="outlined" label={buttons[index]['data'][1]['label']} />
+                                </div>
+                            </div>
+                            </div>
+                            <div style={{width:"50vw", display:"flex", alignItems:"center", paddingLeft:"10%"}}>
+                                <img src={images[0]}/>              
+                            </div>
+                        </div>
+                        <div style={{ color:"white", display:'flex', justifyContent:"center"}}>
+                            <SliderDots index={index} setIndex={setIndex} length={headings.length} />
+                        </div>
+                    </div>
+                </div>
+                <div style={{position:"absolute", left:"-5%", bottom:"50%", transform:"rotate(-90deg)", fontSize:144, zIndex:0,color:"white", opacity:"0.2" }}>
+                    {title}
+                </div>
+            </div>
     )
 }
 
