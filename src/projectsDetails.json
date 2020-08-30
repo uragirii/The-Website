@@ -1,0 +1,147 @@
+{
+    "title" : "All Project Details",
+    "createdOn" : "2020-08-27",
+    "creator" : "Apoorv Kansal",
+    "for" : "The Website",
+    "lastRevision" : "2020-08-27",
+    "projects" : {
+        "web" : {
+            "count" : 5,
+            "headings" : ["IETE Horizon Website", "CoursePal","Friends Generator", "FreeFlix", "The Website", "Home Ledger"],
+            "images" : [],
+            "details": [
+              [
+                "Developed both Front End and Back End of the website for IETE. A portal for registering Symposiums and uploading Research Papers to IETE Horizon",
+                "Equipped with powerful search option a user can also search papers among wide selection of Research Papers. The website is currently being tested in beta mode."
+              ],
+              [
+                "Developed a static website similar to Udemy for MOOC Courses. This project was assigned to me during taking PayPal's REST API Course.",
+                "Made 3 logins for admin, teachers and students. Used MongoDB as Database but also implemented the database from scratch using JSON files."
+              ],
+              [
+                "A simple webpage to run my TensorFlow model on the browser. The webpage is hosted using Github Pages. User can generate Friends Script on the web",
+                "I used TensorFlowJS to load the custom trained model on the website. Then user can enter the first sentence and then model will generate script."
+              ],
+              [
+                "First \"complete\" website made by me. This website was made after completion of my Web Developer Bootcamp by Colt Steele. ",
+                "Simple Static website with MongoDB as database. Has features like saving user data, admin controls etc. UI was highly inspired from Netflix"
+              ],
+              [
+                "I nicknamed my personal website \"The Website\". This website was built using React and Firebase for hosting.",
+                "There are some easter eggs hidden in the website and I plan to expand functionality of this website. Check Github Readme for more."
+              ],
+              [
+                "I decided to make a website for my house expenses. After finding out all the things required, quickly made a static website to store all types of household expenses",
+                "User can add multiple houses, add credit cards, etc. Monthly expense reports were generated and even graphs were made. "
+              ]
+            ],
+            "buttons": [
+              {
+                  "forProject" : "IETE Horizon Website",
+                  "data" : [
+                      {
+                          "type": "contained",
+                          "tooltip" : "Due to security reasons, Github Repo is Private.",
+                          "label" : "Github",
+                          "href" : null
+                      },
+                      {
+                          "type" : "outlined",
+                          "tooltip" : "Visit the website and see more",
+                          "label" : "Visit",
+                          "href" : "https://iete-horizon.web.app/"
+                      }
+                  ]
+              },
+              {
+                "forProject" : "CoursePal",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Visit GitHub Repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/coursepal"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "More Screenshots",
+                        "label" : "More",
+                        "href" : "https://github.com/uragirii/coursepal/tree/jsonDB/screenshots"
+                    }
+                ]
+            },{
+                "forProject" : "Friends Generatoe",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Visit the Github repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/Friends-Generator"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "Visit the website and try model",
+                        "label" : "Visit",
+                        "href" : "https://uragirii.github.io/Friends-Generator/"
+                    }
+                ]
+            },
+            {
+                "forProject" : "FreeFlix",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Visit the Github repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/freeflix"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "See More",
+                        "label" : "More",
+                        "href" : null
+                    }
+                ]
+            },
+            {
+                "forProject" : "The Website",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Visit Github repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/the-website"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "Visit the website and see more",
+                        "label" : "More",
+                        "href" : "https://apoorv.web.app/"
+                    }
+                ]
+            },
+            {
+                "forProject" : "Home Ledger",
+                "data" : [
+                    {
+                        "type": "contained",
+                        "tooltip" : "Visit Github repo",
+                        "label" : "Github",
+                        "href" : "https://github.com/uragirii/Home-Ledger"
+                    },
+                    {
+                        "type" : "outlined",
+                        "tooltip" : "See More",
+                        "label" : "More",
+                        "href" : null
+                    }
+                ]
+            }
+            ]
+          },
+        "app" : {},
+        "ml-dl" : {},
+        "other" : {}
+    },
+    "remarks" : "Contains the details of all the projects to be displayed in The Website"
+}

@@ -45,7 +45,7 @@ function ProjectCrousel({images, headings, details, buttons}) {
                 <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
                     <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
                         <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-                            <img src={images[index]}/>              
+                            <img src={images[0]}/>              
                         </div>
                         <div style={{width:"50vw", display:"flex", alignItems:"center"}}>
                             <div>
@@ -57,14 +57,14 @@ function ProjectCrousel({images, headings, details, buttons}) {
                                     <Para text={details?details[index][1]:"Details not found"}/>
                                 </div>
                                 <div style={{width:"70%", paddingTop:"5%", display:"flex"}}>
-                                    <Button type="contained" label={buttons[index][0]} css={{marginRight:"5%"}}/>
-                                    <Button type="outlined" label={buttons[index][1]} />
+                                    <Button type="contained" label={buttons[index]['data'][0]['label']} css={{marginRight:"5%"}}/>
+                                    <Button type="outlined" label={buttons[index]['data'][1]['label']} />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div style={{ color:"white", display:'flex', justifyContent:"center"}}>
-                        <SliderDots index={index} setIndex={setIndex} length={images.length} />
+                        <SliderDots index={index} setIndex={setIndex} length={headings.length} />
                     </div>
                 </div>
             </div>

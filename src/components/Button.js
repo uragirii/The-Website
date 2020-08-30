@@ -4,7 +4,7 @@ import colors from '../colors'
 const styles = {
     "container": {
       "background": colors.secondary.background,
-      "border": "1px solid rgba(255, 0, 102, 0.99)",
+      "border": "1px solid rgba(213, 0, 86, 0.99)",
       "boxSizing": "border-box",
       "padding": "4px",
       "display": "flex",
@@ -28,7 +28,7 @@ const styles = {
       "textDecoration": "none"
     },
     "outlined": {
-      "border": "2px solid rgba(255, 0, 102, 0.99)",
+      "border": "2px solid rgba(213, 0, 86, 0.99)",
       "boxSizing": "border-box",
       "padding": "4px",
       "display": "flex",
@@ -51,7 +51,7 @@ const styles = {
     },
     "outlined_hover": {
       "background": colors.secondary.background,
-      "border": "2px solid rgba(255, 0, 102, 0.99)",
+      "border": "2px solid rgba(213, 0, 86, 0.99)",
       "boxSizing": "border-box",
       "padding": "4px",
       "display": "flex",

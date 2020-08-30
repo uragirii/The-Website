@@ -2,6 +2,7 @@ import React from 'react'
 import { Heading, Button, Para, TextInput, TextArea, ProjectsBar } from "./components/index";
 import iete from "./assests/IETE.png"
 import colors from "./colors"
+import projectsDetails from './projectsDetails'
 
 import ProjectCrousel from "./components/ProjectCrousel"
 
@@ -34,57 +35,9 @@ const styles = {
     
 }
 
-const webProjects = {
-  count : 5,
-  headings : ["IETE Horizon Website", "CoursePal", "FreeFlix", "The Website", "Home Ledger"],
-  images : [iete, iete, iete, iete, iete],
-  details: [
-    [
-      "Developed both Front End and Back End of the website for IETE. A portal for registering Symposiums and uploading Research Papers to IETE Horizon",
-      "Equipped with powerful search option a user can also search papers among wide selection of Research Papers. The website is currently being tested in beta mode."
-    ],
-    [
-      "Developed a static website similar to Udemy for MOOC Courses. This project was assigned to me during taking PayPal's REST API Course.",
-      "Made 3 logins for admin, teachers and students. Used MongoDB as Database but also implemented the database from scratch using JSON files."
-    ],
-    [
-      "First \"complete\" website made by me. This website was made after completion of my Web Developer Bootcamp by Colt Steele. ",
-      "Simple Static website with MongoDB as database. Has features like saving user data, admin controls etc. UI was highly inspired from Netflix"
-    ],
-    [
-      "I nicknamed my personal website \"The Website\". This website was built using React and Firebase for hosting.",
-      "There are some easter eggs hidden in the website and I plan to expand functionality of this website. Check Github Readme for more."
-    ],
-    [
-      "I decided to make a website for my house expenses. After finding out all the things required, quickly made a static website to store all types of household expenses",
-      "User can add multiple houses, add credit cards, etc. Monthly expense reports were generated and even graphs were made. "
-    ]
-  ],
-  buttons: [
-    [
-      "Github",
-      "Visit"
-    ],
-    [
-      "Github",
-      "More"
-    ],
-    [
-      "Github",
-      "More"
-    ],
-    [
-      "Github",
-      "Visit"
-    ],
-    [
-      "Github",
-      "More"
-    ]
-  ]
-}
 
 function Projects() {
+  projectsDetails['projects']["web"]['images'].push(iete)
     return (
         <div>
           <div style={styles.section}>
@@ -136,7 +89,8 @@ function Projects() {
             </div>
             </div>
           </div> */}
-          <ProjectCrousel {...webProjects}/>
+          
+          <ProjectCrousel {...projectsDetails['projects']["web"]}/>
           <div style={styles.section}>
             <div style={{display:"flex", height:"100vh"}}>
             <div style={{width:"50vw", paddingTop:"12%", paddingLeft:"15%"}}>
