@@ -7,8 +7,6 @@ const styles = {
   "section": {
     "height": "100vh",
     "maxHeight": "100vh",
-
-    // "borderBottom": "1px solid #000000",
     "position" : "relative"
   },
   "textInput" : {
