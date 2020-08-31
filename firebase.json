@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site":"apoorv",
+    "site": "apoorv",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -13,34 +13,34 @@
         "destination": "/index.html"
       }
     ],
-    "headers":[
+    "headers": [
       {
-        "source":"**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-        "headers":[
-           {
-              "key":"Access-Control-Allow-Origin",
-              "value":"*"
-           }
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
         ]
-     },
-     {
-        "source":"**/*.@(js|css)",
-        "headers":[
-           {
-              "key":"Cache-Control",
-              "value":"max-age=604800"
-           }
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
         ]
-     },
-     {
-        "source":"**/*.@(jpg|jpeg|gif|png)",
-        "headers":[
-           {
-              "key":"Cache-Control",
-              "value":"max-age=604800"
-           }
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
         ]
-     }
-   ]
+      }
+    ]
   }
 }

@@ -13,7 +13,8 @@ const styles = {
       "textDecoration": "none",
       "width": "130",
       "color": "#000",
-      "filter": "drop-shadow(0px 4px 4px #000000);"
+      "filter": "drop-shadow(0px 4px 4px #000000)",
+      "cursor" : "pointer"
     },
     "text": {
       "fontFamily": "Consolas",
@@ -26,7 +27,8 @@ const styles = {
       "marginRight": "1em",
       "marginLeft": "1em",
       "color": colors.secondary.text,
-      "textDecoration": "none"
+      "textDecoration": "none",
+      "cursor" : "pointer"
     },
     "outlined": {
       "border": "2px solid rgba(213, 0, 86, 0.99)",
@@ -35,7 +37,8 @@ const styles = {
       "display": "flex",
       "justifyContent": "center",
       "textDecoration": "none",
-      "color": colors.secondary.background
+      "color": colors.secondary.background,
+      "cursor" : "pointer"
     },
     "outlined_text": {
       "fontFamily": "Consolas",
@@ -49,6 +52,7 @@ const styles = {
       "marginLeft": "1em",
       "textDecoration": "none",
       "color": colors.secondary.text,
+      "cursor" : "pointer"
     },
     "outlined_hover": {
       "background": colors.secondary.background,
@@ -59,7 +63,8 @@ const styles = {
       "justifyContent": "center",
       "textDecoration": "none",
       "color": "#F4F1F1",
-      "filter": "drop-shadow(0px 4px 4px #000000);"
+      "filter": "drop-shadow(0px 4px 4px #000000)",
+      "cursor" : "pointer"
     },
     "disabled": {
       "background": "#e5e5e5",
@@ -69,7 +74,8 @@ const styles = {
       "padding": "4px",
       "justifyContent": "center",
       "textDecoration": "none",
-      "color": "#AB9E9E"
+      "color": "#AB9E9E",
+      "cursor" : "pointer"
     },
     "disabled_text": {
       "fontFamily": "Consolas",
@@ -81,7 +87,8 @@ const styles = {
       "margin": "4px",
       "marginRight": "1em",
       "marginLeft": "1em",
-      "textDecoration": "none"
+      "textDecoration": "none",
+      "cursor" : "pointer"
     }
   }
 
@@ -102,7 +109,6 @@ export class Button extends Component {
         const {type, label, href, disabled, css, tooltip, onClick} = this.props
         
         if (type==="disabled" || disabled){
-            // TODO: Add tooltip
             return (
                 <a style={{...styles.disabled, ...css}} {...{...this.props}}>
                     <div  style={styles.disabled_text}>
