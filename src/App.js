@@ -4,6 +4,7 @@ import ContactMe from "./ContactMe"
 import Projects from "./Projects"
 import Home from "./Home"
 import E404 from './404'
+import Unsubscribe from "./Unsubscribe";
 import { Route, Switch } from 'react-router-dom';
 
 function App(){
@@ -17,6 +18,7 @@ function App(){
         <Route path="/contactme" component={ContactMe} exact/> 
         <Route path="/projects" component={Projects} exact/>
         <Route path="/project" component={Projects} exact/>
+        <Route path="/email/unsubscribe/:id" component={Unsubscribe} exact/>
         <Route component={E404} /> 
       </Switch>
     </div>
