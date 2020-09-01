@@ -6,7 +6,7 @@
 
 This is my Personal Porfolio-Website to showcase my talent in CSS, React and Web Development along with my other projects.
 
-Right now it is in early stage and I've just deployed it to check some things. Right now I'm using Firebase Hosting to host the website.
+Right now almost all of the functions are working good. Only pictures in the projects are not included and site is not optimized for mobile users. My next focus is to complete the screenshot work.
 
 Visit Website Here : [apoorv.web.app](http://apoorv.web.app/)
 
@@ -35,11 +35,12 @@ I used `React JS` to make the website and then used Firebase Hosting to Host the
 
 - `GSAP` and `useIntersection` : The animations on scoll is provided using GSAP 3.0 and using a custom hook : `useIntersection`. If you want to know what `useIntersection` is read about [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 - Figma : I can't stress this enough but using Figma for designing the website beforehand significantly reduced my developement time. I will share Figma Project for this website in future. Check out Figma [here](https://www.figma.com/).
+- Nodemailer : I'm using nodemailer to send emails for contacting me. It has really reduced my work.
 - Helpful Community : I just love programming community on Reddit, StackOverflow, Medium, YouTube etc. There numerous tutorials and articles have helped in solving made bugs.
 
 ### Future Plans
 
-I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.1alphaO`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.2alphaN`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
 
 After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
 
