@@ -11,7 +11,8 @@ const sendEmail = utility.sendEmail
 admin.initializeApp()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors({ origin: true }));
-
+// TODO: Add protection on the API
+// TODO: change the Email Template
 
 const db = admin.firestore()
 
@@ -79,15 +80,12 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 });
 
 exports.addEmail = functions.https.onRequest((req, res)=>{
-    // db.collection('contacts').doc().set(data)
-    // .then(()=>{
-    //     console.log("Added")
-    //     res.json({data:"completed"})
-    // })
-    // .catch((err)=>{
-    //     res.json({err})
-    // })
-    res.json({data:"done"})
+    res.json({data:null, err:"API not in use"})
+
+})
+
+exports.addMessage = functions.https.onRequest((req, res)=>{
+    res.json({data:null, err:"API not in use"})
 
 })
 

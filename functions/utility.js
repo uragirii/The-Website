@@ -175,7 +175,7 @@ const getEmailConfig = (data) => {
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: 'Trebuchet MS', Tahoma, sans-serif"><![endif]-->
 <div style="color:#f4f1f1;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 <div style="line-height: 1.2; font-size: 12px; color: #f4f1f1; font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; mso-line-height-alt: 14px;">
-<p style="line-height: 1.2; word-break: break-word; mso-line-height-alt: 14px; margin: 0;"><strong><span style="font-size: 18px;">Dear Joe Doe,</span></strong></p>
+<p style="line-height: 1.2; word-break: break-word; mso-line-height-alt: 14px; margin: 0;"><strong><span style="font-size: 18px;">Dear ${data['name']},</span></strong></p>
 <p style="line-height: 1.2; word-break: break-word; mso-line-height-alt: 14px; margin: 0;"> </p>
 <p style="line-height: 1.2; word-break: break-word; mso-line-height-alt: 14px; margin: 0;"> </p>
 <p style="line-height: 1.2; word-break: break-word; font-size: 18px; mso-line-height-alt: 22px; margin: 0;"><span style="font-size: 18px;">Thank you for contacting me. I will get back to you soon. Here I've also included your response. If there is any error, please fill the form again <a href="https://apoorv.web.app/contact" rel="noopener" style="text-decoration: underline; color: #d50056;" target="_blank">here.</a></span></p>
@@ -328,7 +328,7 @@ const getEmailConfig = (data) => {
     const mailOptions = {
         from: '"Apoorv Kansal" <apoorvkansal38@gmail.com>',
         to: data['email'],
-        subject : "Glad that we could talk",
+        subject : "Let's Talk",
         html : mailHTML
     }
     return mailOptions
