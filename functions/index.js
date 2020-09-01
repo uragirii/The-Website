@@ -53,6 +53,7 @@ app.post("/contact", async (req, res)=>{
 })
 app.post("/blacklist", (req, res)=>{
     const data = req.body
+    console.log(data)
     if(data && data['email']){
         db.collection('blacklist').doc('blacklist')
         .update({

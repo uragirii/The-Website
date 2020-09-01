@@ -26,7 +26,7 @@ function ContactMe() {
   const [err, setErr] = useState(null)
   const [status, setStatus] = useState("FORM")
   document.title = "Apoorv Kansal | Contact Me"
-  const POSTURL = "http://localhost:5001/the-website-ak/us-central1/api/contact"
+  const POSTURL = "https://us-central1-the-website-ak.cloudfunctions.net/api/contact"
 
   const checkAndSend = ()=>{
     // TODO: Check if email is correct or not
