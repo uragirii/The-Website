@@ -1,7 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin')
 const express = require('express');
-const cors = require('cors');
 const bodyParser = require('body-parser')
 const utility = require('./utility')
 const app = express();
@@ -10,10 +9,24 @@ const sendEmail = utility.sendEmail
 
 admin.initializeApp()
 app.use(bodyParser.json())
-app.use(cors({ origin: false }));
 // TODO: Add protection on the API
 
+const cors = (request, response, next) => {
+    response.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'DELETE,GET,PATCH,POST,PUT',
+        'Access-Control-Allow-Headers': 'Content-Type,Authorization'
+    });
 
+    // intercept OPTIONS method
+    if(request.method === 'OPTIONS') {
+        response.send(200);
+    } else {
+        next();
+    }
+}
+
+app.use(cors)
 const db = admin.firestore()
 
 app.post("/contact", async (req, res)=>{
