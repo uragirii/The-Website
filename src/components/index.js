@@ -4,8 +4,8 @@ import Para from './Para'
 import TextInput from './TextInput'
 import TextArea from './TextArea'
 import ProjectsBar from './ProjectsBar'
-
+import Loader from './Loader'
 
 export {
-    Button, Heading, Para, TextInput,TextArea, ProjectsBar
+    Button, Heading, Para, TextInput,TextArea, ProjectsBar, Loader
 }

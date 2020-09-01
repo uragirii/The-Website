@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import colors from './colors'
 import { useLocation } from 'react-router-dom'
-import { Button } from "./components/index";
+import { Button,Loader } from "./components/index";
 import gsap from 'gsap'
 
 const styles = {
@@ -80,7 +80,7 @@ function E404() {
                 It's a classic 404 error. Check your link again.
             </div>
             <div style={{display:'flex', justifyContent:'center', paddingTop:"2%", opacity:0}} ref={el => {p4=el}}>
-                <Button type="contained" label="Visit Home" href="/" />
+                <Button type="contained" label="Visit Home" href="/" /> <Loader/> 
             </div>
             </div>
             <div  style={{...styles.heading,position:"absolute", bottom:100, left:"40%", opacity:"0.2", fontSize:144}}>

@@ -9,10 +9,10 @@ const app = express();
 const sendEmail = utility.sendEmail
 
 admin.initializeApp()
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cors({ origin: true }));
+app.use(bodyParser.json())
+app.use(cors({ origin: false }));
 // TODO: Add protection on the API
-// TODO: change the Email Template
+
 
 const db = admin.firestore()
 
@@ -26,7 +26,6 @@ app.post("/contact", async (req, res)=>{
             const blacklistDoc = await db.collection('blacklist').doc('blacklist').get() 
             // Doc will always exist
             const blacklistList = blacklistDoc.data()['data']
-
             // Check if Email is BlackListed or not
             if(blacklistList.includes(data['email'])){
                 res.json({data:null, err:"Email Blacklisted"})

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Heading, Button, Para, TextInput, TextArea } from "./components/index";
+import { Heading, Button, Para, TextInput, TextArea, Loader } from "./components/index";
 
 
 const styles = {
@@ -24,12 +24,120 @@ function ContactMe() {
   const [email, setEmail] = useState(null)
   const [message, setMessage] = useState(null)
   const [err, setErr] = useState(null)
+  const [status, setStatus] = useState("FORM")
   document.title = "Apoorv Kansal | Contact Me"
+  const POSTURL = "http://localhost:5001/the-website-ak/us-central1/api/contact"
 
   const checkAndSend = ()=>{
-    //TODO: Check if email is correct or not
-    console.log({name, email, message})
+    // TODO: Check if email is correct or not
+    // TODO: Add animations 
+    if(name && email && message){
+      setStatus("LOADING")
+      fetch(POSTURL,{
+        method:"POST",
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({name, email, message})
+      })
+      .then(res=>{
+        if(res.status!==200){
+          console.log("No status")
+          throw 'Err'
+        }
+        return res.json()})
+        .then(res=>{
+        const data = res
+        if(!data.err){
+          setStatus("EMAILSENT")
+        }
+        else if(data.err && data.err === "Email Blacklisted"){
+          setStatus("ERRBLACK")
+        }
+        else{
+          setStatus("ERR")
+        }
+      })
+      .catch(err=>{
+        setStatus("ERR")
+      })
+    }
+    else{
+      setErr("Please fill all the blanks")
+    }
+
   }
+
+  const form = (
+    <div>
+      <div style={{display:'flex', paddingTop:"5%"}}>
+      <div style={styles.textInput} className="fadeIn">  
+        <TextInput placeholder="Name" val={(v)=>{setName(v)}} style={{display:'flex', justifyContent:'center'}}/>
+        <TextInput placeholder="Email" val={(v)=>{setEmail(v)}} type="email" style={{display:'flex', justifyContent:'center'}}/>
+      </div>
+      <div style={{display:'flex', justifyContent:'center', flex:1}}>
+        <TextArea placeholder="Message" val ={(v) => {setMessage(v)}} />
+      </div>
+    </div>
+    <div style={{display:'flex', justifyContent:'center', paddingTop:"2%"}}>
+      <Button type="contained" label="Submit" onClick={checkAndSend}/>
+    </div>
+    <div style={{display:'flex', justifyContent:'center', color:"red", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
+      <p>{err}</p>
+    </div>
+    <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
+      <p>A copy of the response will be sent to your Email ID.</p>
+    </div>
+    </div>
+  )
+  const waitForEmail = (
+    <div style={{display:"flex", paddingTop:"5%", justifyContent:"center", alignItems:"center", flexDirection:'column'}}>
+        <Loader />
+        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em", paddingTop:10}}>
+          <p>Please wait, while email is being sent.</p>
+        </div>
+    </div>
+  )
+  const EmailSent = (
+    <div style={{display:"flex", paddingTop:"5%", justifyContent:"center", alignItems:"center", flexDirection:'column'}}>
+        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em", paddingTop:10}}>
+          <p>Email Sent successfully. You may need to check your spam folder. I will contact you soon. Thanks</p>
+        </div>
+    </div>
+  )
+
+  const emailBlackList = (
+    <div style={{display:"flex", paddingTop:"5%", justifyContent:"center", alignItems:"center", flexDirection:'column'}}>
+        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em", paddingTop:10}}>
+          <p>Your email address is blacklisted. This action could not be completed.</p>
+        </div>
+    </div>
+  )
+  const emailErr = (
+    <div style={{display:"flex", paddingTop:"5%", justifyContent:"center", alignItems:"center", flexDirection:'column'}}>
+        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em", paddingTop:10}}>
+          <p>There was a problem. This action could not be completed.</p>
+        </div>
+    </div>
+  )
+  let final
+  if(status === "FORM"){
+    final = form
+  }
+  else if(status === "LOADING"){
+    final = waitForEmail
+  }
+  else if(status === "EMAILSENT"){
+    final = EmailSent
+  }
+  else if(status === "ERRBLACK"){
+    final = emailBlackList
+  }
+  else if(status === "ERR"){
+    final = emailErr
+  }
+
 
   return (
     <div className="Contact">
@@ -43,31 +151,10 @@ function ContactMe() {
         <Heading label="Contact Me" />
           </div>        
         <Para text="I would love to talk to you and even work for you. I'm currently looking for work. Just fill the form below and I will reply to you in 24 hours."/>
-        <div style={{display:'flex', paddingTop:"5%"}}>
-          <div style={styles.textInput} className="fadeIn">  
-            <TextInput placeholder="Name" val={(v)=>{setName(v)}} style={{display:'flex', justifyContent:'center'}}/>
-            <TextInput placeholder="Email" val={(v)=>{setEmail(v)}} type="email" style={{display:'flex', justifyContent:'center'}}/>
-          </div>
-          <div style={{display:'flex', justifyContent:'center', flex:1}}>
-            <TextArea placeholder="Message" val ={(v) => {setMessage(v)}} />
-          </div>
-        </div>
-        
-        <div style={{display:'flex', justifyContent:'center', paddingTop:"2%"}}>
-          <Button type="contained" label="Submit" onClick={checkAndSend}/>
-        </div>
-        <div style={{display:'flex', justifyContent:'center', color:"red", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
-          <p>{err}</p>
-        </div>
-        <div style={{display:'flex', justifyContent:'center', color:"#FFFFFF", fontFamily:"Consolas", fontStyle:"italic", fontSize:"0.8em"}}>
-          <p>A copy of the response will be sent to your Email ID.</p>
-        </div>
-        <div style={{paddingTop:"2%"}}>
-        </div>
+        {final}
       </div>
       </div>
     </div>
-    
     </div>
   );
 }
