@@ -44,7 +44,7 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                     <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
                         <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
                             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-                                <img src={images[0]} alt="Project"/>              
+                                <img src={images[index]} alt={headings[index]}/>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center"}}>
                                 <div>

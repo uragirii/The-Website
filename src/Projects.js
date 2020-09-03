@@ -1,8 +1,13 @@
 import React from 'react'
-import iete from "./assests/IETE.png"
 import colors from "./colors"
 import projectsDetails from './projectsDetails'
 import { NavBar } from "./components/index";
+import iete from './assests/Web/IETE_Output.png'
+import website from './assests/Web/TheWebsite_Output.png'
+import coursepal from './assests/Web/CoursePal_Output.png'
+import friends from './assests/Web/Friends_Output.png'
+import home from './assests/Web/Home_Output.png'
+import freeflix from './assests/Web/FreeFlix_Output.png'
 
 import ProjectCrousel from "./components/ProjectCrousel"
 
@@ -62,10 +67,10 @@ function Projects() {
         Scroll down to view my projects in different domains
       </div>
       </div>          
-          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} />
-          <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip/>
-          <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} />
-          <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip/>
+          <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} images={[iete, coursepal, friends, freeflix, website, home]}/>
+          <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
+          <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} images={[iete, coursepal, friends, freeflix, website, home]} />
+          <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
         </div>
     )
 }
