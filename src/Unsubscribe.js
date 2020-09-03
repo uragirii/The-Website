@@ -50,7 +50,7 @@ function Unsubscribe(props) {
     .then(res=>{
       if(res.status!==200){
         console.log("No status")
-        throw 'Err'
+        new Error({ code : 403});
       }
       return res.json()
     })

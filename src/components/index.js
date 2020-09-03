@@ -5,7 +5,8 @@ import TextInput from './TextInput'
 import TextArea from './TextArea'
 import ProjectsBar from './ProjectsBar'
 import Loader from './Loader'
+import NavBar from './NavBar'
 
 export {
-    Button, Heading, Para, TextInput,TextArea, ProjectsBar, Loader
+    Button, Heading, Para, TextInput,TextArea, ProjectsBar, Loader, NavBar
 }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Heading, Button, Para, TextInput, TextArea, Loader } from "./components/index";
+import { Heading, Button, Para, TextInput, TextArea, Loader, NavBar } from "./components/index";
 
 
 const styles = {
@@ -44,7 +44,7 @@ function ContactMe() {
       .then(res=>{
         if(res.status!==200){
           console.log("No status")
-          throw 'Err'
+          new Error({ code : 403 });
         }
         return res.json()})
         .then(res=>{
@@ -142,6 +142,9 @@ function ContactMe() {
   return (
     <div className="Contact">
     <div style={styles.section}>
+    <div style={{position:"absolute", right:0, top: "4%", paddingRight:"4%"}}>
+      <NavBar current="CONTACT" />
+    </div>
       <div style={{display:'flex'}}>
       <svg width="300" height="100vh" viewBox="0 0 378 1024" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M158.808 229.676C150.155 175.967 192.911 0 192.911 0H0V1024H365.463C365.463 1024 391.422 998.559 365.463 942.023C339.504 885.488 247.374 776.657 231.595 718.001C215.816 659.346 263.662 501.046 247.374 447.337C231.086 393.629 167.461 283.384 158.808 229.676Z" fill="#FF0066" fill-opacity="0.99" stroke="#FF0066"/>
