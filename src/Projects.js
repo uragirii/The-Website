@@ -2,12 +2,17 @@ import React from 'react'
 import colors from "./colors"
 import projectsDetails from './projectsDetails'
 import { NavBar } from "./components/index";
+// Web Projects Images
 import iete from './assests/Web/IETE_Output.png'
 import website from './assests/Web/TheWebsite_Output.png'
 import coursepal from './assests/Web/CoursePal_Output.png'
 import friends from './assests/Web/Friends_Output.png'
 import home from './assests/Web/Home_Output.png'
 import freeflix from './assests/Web/FreeFlix_Output.png'
+// App Project Images
+import chatapp from './assests/App/ChatApp.png'
+import hellorDoctor from './assests/App/Hello Doctor.png'
+import vitask from './assests/App/VITask.png'
 
 import ProjectCrousel from "./components/ProjectCrousel"
 
@@ -68,7 +73,7 @@ function Projects() {
       </div>
       </div>          
           <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} images={[iete, coursepal, friends, freeflix, website, home]}/>
-          <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
+          <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip images={[vitask, hellorDoctor, chatapp]}/>
           <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} images={[iete, coursepal, friends, freeflix, website, home]} />
           <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
         </div>
