@@ -6,7 +6,7 @@
 
 This is my Personal Porfolio-Website to showcase my talent in CSS, React and Web Development along with my other projects.
 
-Right now almost all of the functions are working good. Only pictures in the projects are not included and site is not optimized for mobile users. My next focus is to complete the screenshot work.
+Right now almost all of the functions are working good. Site is not optimized for mobile users. My next focus is to make a mobile friendly site.
 
 Visit Website Here : [apoorv.web.app](http://apoorv.web.app/)
 
@@ -40,7 +40,7 @@ I used `React JS` to make the website and then used Firebase Hosting to Host the
 
 ### Future Plans
 
-I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.2alphaN`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.3alphaO`. Currently website is designed only for Desktop use only. Please dont open it on mobile and judge me. 
 
 After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
 
