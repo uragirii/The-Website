@@ -262,11 +262,11 @@ function Home() {
             <img src={StackBlob} style={{position:"absolute", width:"50%", right:0, top:-4,height:"100vh"}} alt="blob"/>
         </div>
         {/* Footer */}
-        <div style={{background:"#272A2C", marginTop:-12, zIndex:2}}>
+        {/* <div style={{background:"#272A2C", marginTop:-12, zIndex:2}}>
           <div style={{padding:"2%", color:"#FFFFFF", textAlign:"center","fontFamily":"'Roboto Mono', monospace","whiteSpace":"pre-line\""}}>
           Made with &#10084; by Apoorv Kansal. If you loved this, checkout my <a href="https://github.com/uragirii">GitHub</a> for more.
           </div>
-        </div>
+        </div> */}
     </div>
   );
 }

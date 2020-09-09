@@ -13,7 +13,11 @@ import freeflix from './assests/Web/FreeFlix_Output.png'
 import chatapp from './assests/App/ChatApp.png'
 import hellorDoctor from './assests/App/Hello Doctor.png'
 import vitask from './assests/App/VITask.png'
-
+// ML Project Images
+import friendsg from "./assests/Ml/Friends_Generator.png";
+import image from "./assests/Ml/Image.png";
+import twitter from "./assests/Ml/Twitter.png";
+import misc from "./assests/Ml/misc.png";
 import ProjectCrousel from "./components/ProjectCrousel"
 
 const styles = {
@@ -74,7 +78,7 @@ function Projects() {
       </div>          
           <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} images={[iete, coursepal, friends, freeflix, website, home]}/>
           <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip images={[vitask, hellorDoctor, chatapp]}/>
-          <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} images={[iete, coursepal, friends, freeflix, website, home]} />
+          <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} images={[image, friendsg, twitter, misc]} />
           <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
         </div>
     )
