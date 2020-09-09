@@ -19,6 +19,12 @@ import image from "./assests/Ml/Image.png";
 import twitter from "./assests/Ml/Twitter.png";
 import misc from "./assests/Ml/misc.png";
 import ProjectCrousel from "./components/ProjectCrousel"
+// Others
+import anyme from "./assests/Others/anYmedl.png";
+import captcha from "./assests/Others/captcha.png";
+import ranime from "./assests/Others/ranime.png";
+import wallpy from "./assests/Others/wallpy.png";
+import jut from "./assests/Others/jut.png";
 
 const styles = {
     "section": {
@@ -79,7 +85,7 @@ function Projects() {
           <ProjectCrousel {...projectsDetails['projects']["web"]} title={"Web"} images={[iete, coursepal, friends, freeflix, website, home]}/>
           <ProjectCrousel {...projectsDetails['projects']["app"]} title={"App"} flip images={[vitask, hellorDoctor, chatapp]}/>
           <ProjectCrousel {...projectsDetails['projects']["ml-dl"]} title={"ML"} images={[image, friendsg, twitter, misc]} />
-          <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip images={[iete, coursepal, friends, freeflix, website, home]}/>
+          <ProjectCrousel {...projectsDetails['projects']["other"]} title={"Other"} flip images={[ranime, vitask, captcha, anyme, jut, wallpy]}/>
         </div>
     )
 }
