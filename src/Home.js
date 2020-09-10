@@ -47,7 +47,7 @@ const styles = {
     "fontFamily": "Consolas, monospace",
     "fontStyle": "normal",
     "fontWeight": "normal",
-    "fontSize": "18px",
+    "fontSize": "0.9rem",
     "lineHeight": "21px",
     "letterSpacing": "0.005em",
     "color": "#E5E5E5"
@@ -83,7 +83,7 @@ function Home() {
   const intersection3 = useIntersection(section3, {
     root:null,
     rootMargin:"0px",
-    threshold:0.8
+    threshold:0.5
   })
 
   const fadeIn =  (element)=>{
@@ -160,7 +160,7 @@ function Home() {
               </div>
               <div >
               <div style={{paddingTop:"9%"}} className="fadeIn2">
-                <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.69 CGPA. My subject of study is Electronics and Communication Engineering."/>
+                <Para text="I’m a 4th year student at Vellore Institute of Technology, India with 8.69 CGPA. My subject of study is Electronics and Communication Engineering."/>
               </div>
               <div className="fadeIn2">
                 <Para text="But my love resides with coding. I’ve always tried to bridge the gap between coding and designing. I have worked on many projects and managed teams. Check out my stack for all the languages I code in and check out my resume for info."/>
@@ -187,22 +187,25 @@ function Home() {
         <div style={styles.section} ref = {section3} id="stack">
             <div style = {{paddingLeft:"10%", zIndex:2, height:"100%"}}>
               <div style= {{ display:'flex', height:"100%"}}>
-                <div style= {{ flex: 4, paddingTop:"5%"}} className="fadeIn3">
+                <div style= {{ flex: 4, paddingTop:"5%"}}   >
+                  <div className="fadeIn3">
                   <Heading label="My Stack"/>
+                  </div>
+
                   <div>
-                  <div style={{paddingTop:"9%"}} >
+                  <div style={{paddingTop:"9%"}} className="fadeIn3" >
                     <Para text="Depending on the application I like to code in different languages."/>
                   </div>
-                  <div>
+                  <div className="fadeIn3">
                     <Para text="But that doesn’t mean I’m limited to only these languages. I am a pretty fast learner and always up for the challenge to learn new things."/>
                   </div>
-                  <div>
+                  <div className="fadeIn3">
                     <Para text="After all, if you know the basics, learning a new language is a cake walk."/>
                   </div>
                   </div>
                 </div>
-                <div style= {{ flex:4.5, marginLeft:"10%", paddingTop:"4%",paddingBottom:"5%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>
-                  <div>
+                <div style= {{ flex:4.5, marginLeft:"20%", paddingTop:"4%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>
+                  <div className="fadeIn3">
                   <span style={styles.langH}>Web Dev</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -225,7 +228,7 @@ function Home() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="fadeIn3">
                   <span style={styles.langH}>Machine Learning</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -242,7 +245,7 @@ function Home() {
                   </div>
 
 
-                  <div>
+                  <div className="fadeIn3">
                     <span style={styles.langH}>Other Stuff</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -310,7 +313,7 @@ function Home() {
               </div>
               <div >
               <div style={{paddingTop:"3%"}} className="fadeIn2">
-                <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.69 CGPA."
+                <Para text="I’m a 4th year student at Vellore Institute of Technology, India with 8.69 CGPA."
                   css={{fontSize:"0.9rem"}}/>
               </div>
               <div className="fadeIn2" style={{paddingTop:"3%"}}>
@@ -333,23 +336,25 @@ function Home() {
         </div>
         <div style={styles.section} ref = {section3} id="stack">
             <div style = {{paddingLeft:"10%", zIndex:2, height:"100%"}}>
-              <div style= {{ display:'flex', height:"100%"}}>
-                <div style= {{ flex: 4, paddingTop:"5%"}} className="fadeIn3">
-                  <Heading label="My Stack"/>
-                  <div>
-                  <div style={{paddingTop:"9%"}} >
-                    <Para text="Depending on the application I like to code in different languages."/>
+              <div style= {{ display:'flex', height:"100%", flexDirection:"column"}}>
+                <div style= {{ paddingTop:"5%"}} >
+                  <div className="fadeIn3" >
+                    <Heading label="My Stack"/>
                   </div>
-                  <div>
-                    <Para text="But that doesn’t mean I’m limited to only these languages. I am a pretty fast learner and always up for the challenge to learn new things."/>
+                  <div  >
+                  <div style={{paddingTop:"5%"}} className="fadeIn3" >
+                    <Para text="Depending on the application I like to code in different languages." css={{fontSize:"0.9rem"}}/>
                   </div>
-                  <div>
-                    <Para text="After all, if you know the basics, learning a new language is a cake walk."/>
+                  <div className="fadeIn3" >
+                    <Para text="I am a pretty fast learner and always up for the challenge to learn new things." css={{fontSize:"0.9rem"}}/>
+                  </div>
+                  <div className="fadeIn3" >
+                    <Para text="After all, if you know the basics, learning a new language is a cake walk." css={{fontSize:"0.9rem"}}/>
                   </div>
                   </div>
                 </div>
-                <div style= {{ flex:4.5, marginLeft:"10%", paddingTop:"4%",paddingBottom:"5%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>
-                  <div>
+                <div style= {{marginTop:"5%",paddingBottom:"5%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}  >
+                  <div style={{paddingTop:"5%"}} className="fadeIn3" >
                   <span style={styles.langH}>Web Dev</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -372,7 +377,7 @@ function Home() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="fadeIn3" >
                   <span style={styles.langH}>Machine Learning</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -389,7 +394,7 @@ function Home() {
                   </div>
 
 
-                  <div>
+                  <div className="fadeIn3" >
                     <span style={styles.langH}>Other Stuff</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -407,8 +412,6 @@ function Home() {
                 </div>
               </div>
             </div>
-            
-            <img src={StackBlob} style={{position:"absolute", width:"50%", right:0, top:-4,height:"100vh"}} alt="blob"/>
         </div>
         {/* Footer */}
         {/* <div style={{background:"#272A2C", marginTop:-12, zIndex:2}}>
@@ -461,7 +464,7 @@ function Home() {
               </div>
               <div >
               <div style={{paddingTop:"9%"}} className="fadeIn2">
-                <Para text="I’m a 4th year student at Vellore Instutite of Technology, India with 8.69 CGPA. My subject of study is Electronics and Communication Engineering."/>
+                <Para text="I’m a 4th year student at Vellore Institute of Technology, India with 8.69 CGPA. My subject of study is Electronics and Communication Engineering."/>
               </div>
               <div className="fadeIn2">
                 <Para text="But my love resides with coding. I’ve always tried to bridge the gap between coding and designing. I have worked on many projects and managed teams. Check out my stack for all the languages I code in and check out my resume for info."/>
@@ -488,22 +491,25 @@ function Home() {
         <div style={styles.section} ref = {section3} id="stack">
             <div style = {{paddingLeft:"10%", zIndex:2, height:"100%"}}>
               <div style= {{ display:'flex', height:"100%"}}>
-                <div style= {{ flex: 4, paddingTop:"5%"}} className="fadeIn3">
+                <div style= {{ flex: 4, paddingTop:"5%"}}   >
+                  <div className="fadeIn3">
                   <Heading label="My Stack"/>
+                  </div>
+
                   <div>
-                  <div style={{paddingTop:"9%"}} >
+                  <div style={{paddingTop:"9%"}} className="fadeIn3" >
                     <Para text="Depending on the application I like to code in different languages."/>
                   </div>
-                  <div>
+                  <div className="fadeIn3">
                     <Para text="But that doesn’t mean I’m limited to only these languages. I am a pretty fast learner and always up for the challenge to learn new things."/>
                   </div>
-                  <div>
+                  <div className="fadeIn3">
                     <Para text="After all, if you know the basics, learning a new language is a cake walk."/>
                   </div>
                   </div>
                 </div>
-                <div style= {{ flex:4.5, marginLeft:"10%", paddingTop:"4%",paddingBottom:"5%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>
-                  <div>
+                <div style= {{ flex:4.5, marginLeft:"20%", paddingTop:"4%",display:"flex", flexDirection:"column", justifyContent:"space-between", zIndex:2 }}>
+                  <div className="fadeIn3">
                   <span style={styles.langH}>Web Dev</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -526,7 +532,7 @@ function Home() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="fadeIn3">
                   <span style={styles.langH}>Machine Learning</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -543,7 +549,7 @@ function Home() {
                   </div>
 
 
-                  <div>
+                  <div className="fadeIn3">
                     <span style={styles.langH}>Other Stuff</span>
                     <div style={{display:"flex", paddingTop:"3%"}}>
                       <div style={{flex:1, paddingLeft:"5%"}}>
@@ -570,7 +576,7 @@ function Home() {
           Made with &#10084; by Apoorv Kansal. If you loved this, checkout my <a href="https://github.com/uragirii">GitHub</a> for more.
           </div>
         </div> */}
-    </div>  
+    </div>
     </BigScreen>
     </>
   );
