@@ -51,7 +51,7 @@ const changeStyle = (focussed, notFocussedStyle, focussedStyle)=>{
 }
 
 
-function TextArea({placeholder, val, type}) {
+function TextArea({placeholder, val, rows, cols,style}) {
     const [focussed, setFocussed] = React.useState(false);
     const [value, setValue] = React.useState("")
 
@@ -61,7 +61,7 @@ function TextArea({placeholder, val, type}) {
     val(value)
 
     return (
-        <div>
+        <div style={style}>
             <textarea 
             style={changeStyle(focussed, styles.notfocussed, styles.focussed)} 
             placeholder={placeholder} 
@@ -69,8 +69,8 @@ function TextArea({placeholder, val, type}) {
             onBlur={()=>setFocussed(false)}
             value={value}
             onChange={changeVal}
-            rows={10}
-            cols={40}
+            rows={rows? rows :10}
+            cols={cols? cols: 40}
             />
         </div>
     )

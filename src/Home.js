@@ -44,7 +44,7 @@ const styles = {
     "paddingRight" : "10%"
   },
   "lang" : {
-    "fontFamily": "Consolas",
+    "fontFamily": "Consolas, monospace",
     "fontStyle": "normal",
     "fontWeight": "normal",
     "fontSize": "18px",

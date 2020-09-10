@@ -1,6 +1,6 @@
 .App{
   background-color: #0D0416;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -12,7 +12,6 @@
 
 .section {
   height: 100vh;
-  max-height: 100vh;
   background-color: #0D0416;
 }
 
