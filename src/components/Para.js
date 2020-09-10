@@ -2,7 +2,7 @@ import React from 'react'
 import colors from '../colors'
 const styles = {
     text:{
-        "fontFamily": "Consolas",
+        "fontFamily": "Consolas, monospace",
         "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": "18px",
@@ -16,9 +16,9 @@ const styles = {
 }
 
 
-export default function Para({text}) {
+export default function Para({text, css}) {
     return (
-        <div style={styles.text}>
+        <div style={{...styles.text, ...css}}>
             {text}
         </div>
     )

@@ -17,11 +17,11 @@ const styles = {
       "cursor" : "pointer"
     },
     "text": {
-      "fontFamily": "Consolas",
+      "fontFamily": "Consolas, monospace",
       "fontStyle": "normal",
       "fontWeight": "normal",
-      "fontSize": "18px",
-      "lineHeight": "21px",
+      "fontSize": "1rem",
+      "lineHeight": "1rem",
       "letterSpacing": "0.005em",
       "margin": "4px",
       "marginRight": "1em",
@@ -41,11 +41,11 @@ const styles = {
       "cursor" : "pointer"
     },
     "outlined_text": {
-      "fontFamily": "Consolas",
+      "fontFamily": "Consolas, monospace",
       "fontStyle": "normal",
       "fontWeight": "normal",
-      "fontSize": "18px",
-      "lineHeight": "21px",
+      "fontSize": "1rem",
+      "lineHeight": "1rem",
       "letterSpacing": "0.005em",
       "margin": "4px",
       "marginRight": "1em",
@@ -78,11 +78,11 @@ const styles = {
       "cursor" : "pointer"
     },
     "disabled_text": {
-      "fontFamily": "Consolas",
+      "fontFamily": "Consolas, monospace",
       "fontStyle": "normal",
       "fontWeight": "normal",
-      "fontSize": "18px",
-      "lineHeight": "21px",
+      "fontSize": "1rem",
+      "lineHeight": "1rem",
       "letterSpacing": "0.005em",
       "margin": "4px",
       "marginRight": "1em",
