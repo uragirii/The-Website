@@ -413,12 +413,6 @@ function Home() {
               </div>
             </div>
         </div>
-        {/* Footer */}
-        {/* <div style={{background:"#272A2C", marginTop:-12, zIndex:2}}>
-          <div style={{padding:"2%", color:"#FFFFFF", textAlign:"center","fontFamily":"'Roboto Mono', monospace","whiteSpace":"pre-line\""}}>
-          Made with &#10084; by Apoorv Kansal. If you loved this, checkout my <a href="https://github.com/uragirii">GitHub</a> for more.
-          </div>
-        </div> */}
     </div>
     </Mobile>
     <BigScreen>
