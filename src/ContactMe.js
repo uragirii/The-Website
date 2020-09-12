@@ -234,7 +234,7 @@ function ContactMe() {
     </div>
     </Desktop>
     <Mobile>
-    <div className="Contact">
+    <div className="Contact" style={{overflowX:"hidden", overflowY:"scroll"}}>
     <div style={styles.section}>
       <div style={{display:'flex', flexDirection:"column", paddingRight:"5%", paddingLeft:"5%"}}>
       <div style={{paddingTop:"5%", paddingRight:"5%", marginTop:"10%"}}>

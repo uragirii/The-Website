@@ -152,7 +152,7 @@ function Home() {
         </div>
         </div>
         <div style={styles.section} ref = {section2} id= "about">
-        <div style = {{ paddingLeft:"10%", zIndex:2, height:"100%"}}>
+        <div style = {{ paddingLeft:"10%", zIndex:2, height:"100%", paddingTop:60}}>
           <div style= {{ display:'flex', height:"100%"}}>
             <div style= {{ flex: 4, paddingTop:"5%"}}>
               <div className="fadeIn2">
