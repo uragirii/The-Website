@@ -224,7 +224,7 @@
                   "I trained 3 different models on the Friends TV Show Transcript and then asked the model to generate a new script, given a starting dialogue. Suprisingly, even simple models performed great."
               ],
               [
-                  "This was project was made after I completed my certification of Machine Learning. This project does as the name suggests, it helps to analyse Twitter's sentiment on a topic at a particular time",
+                  "This project was made after I completed my certification of Machine Learning. This project does as the name suggests, it helps to analyse Twitter's sentiment on a topic at a particular time",
                   "The script takes a sample of 100 tweets queried according to search term and then run NLP to figure out the sentiments of people tweeting. Then represents it in a neat Pie Chart."
               ],
               [
