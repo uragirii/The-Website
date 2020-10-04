@@ -3,6 +3,7 @@ import colors from './colors'
 import { useLocation } from 'react-router-dom'
 import { Button,Loader } from "./components/index";
 import gsap from 'gsap'
+import {analytics } from './firebaseAnalytics'
 
 const styles = {
     "section": {
@@ -39,6 +40,10 @@ function E404() {
     let p3 = useRef(null)
     let p4 = useRef(null)
     let section = useRef(null)
+
+    useEffect(() => {
+        analytics.logEvent("404_visited", {referal : document.referrer})
+    }, [])
 
     useEffect(() => {
         section.style.visibility="visible"

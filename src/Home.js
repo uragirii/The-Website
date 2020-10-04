@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 // import './App.css';
 import { Heading, Button, Para, NavBar, Mobile, Desktop, BigScreen } from "./components/index";
 
@@ -9,6 +9,7 @@ import photo from './assests/apoorv.jpg'
 import colors from './colors'
 import gsap from 'gsap'
 import { useIntersection } from 'react-use'
+import {analytics} from './firebaseAnalytics'
 
 
 const styles = {
@@ -62,8 +63,13 @@ const styles = {
     "color": "#F4F1F1"
   }
 }
-// TODO: ADD LOGOS AND SHRINK THE SIZE
+
 function Home() {
+
+  useEffect(() => {
+    analytics.logEvent("home_page_visited")
+  }, [])
+
   const section1 = useRef(null)
   const section2 = useRef(null)
   const section3 = useRef(null)

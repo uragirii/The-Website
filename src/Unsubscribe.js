@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import colors from './colors'
 import { Button, Loader } from "./components/index";
 import gsap from 'gsap'
+import {analytics} from './firebaseAnalytics'
 
 const styles = {
     "section": {
@@ -75,6 +76,10 @@ function Unsubscribe(props) {
     let p3 = useRef(null)
     let p4 = useRef(null)
     let section = useRef(null)
+
+    useEffect(() => {
+        analytics.logEvent("unsubscribe_page_visited", {email})
+    }, [email])
 
     useEffect(() => {
         section.style.visibility="visible"

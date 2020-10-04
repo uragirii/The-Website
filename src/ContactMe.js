@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { 
   Heading, 
@@ -12,7 +12,7 @@ import {
   Desktop, 
   Mobile
  } from "./components/index";
-
+import {analytics } from './firebaseAnalytics'
 
 const styles = {
   "section": {
@@ -38,11 +38,16 @@ function ContactMe() {
   document.title = "Apoorv Kansal | Contact Me"
   const POSTURL = "https://us-central1-the-website-ak.cloudfunctions.net/api/contact"
 
+  useEffect(() => {
+    analytics.logEvent("contact_me_visited")
+  }, [])
+
   const checkAndSend = ()=>{
     // TODO: Check if email is correct or not
     // TODO: Add animations 
     if(name && email && message){
       setStatus("LOADING")
+      analytics.logEvent("contact_me_pressed", {name, email, message})
       fetch(POSTURL,{
         method:"POST",
         headers: {

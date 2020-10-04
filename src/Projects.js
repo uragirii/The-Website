@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import colors from "./colors"
 import projectsDetails from './projectsDetails'
 import { NavBar, Mobile, Desktop, BigScreen } from "./components/index";
@@ -26,6 +26,7 @@ import captcha from "./assests/Others/captcha.png";
 import ranime from "./assests/Others/ranime.png";
 import wallpy from "./assests/Others/wallpy.png";
 import jut from "./assests/Others/jut.png";
+import {analytics } from "./firebaseAnalytics"
 
 const styles = {
     "section": {
@@ -161,6 +162,9 @@ const otherLoader = (
 function Projects() {
 
   document.title = "Apoorv Kansal | Projects"
+  useEffect(() => {
+    analytics.logEvent("projects_page_visited")
+  }, [])
     return (
         <div>
             <Desktop>
