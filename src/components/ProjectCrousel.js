@@ -4,6 +4,8 @@ import { Heading, Button, Para, Mobile, BigScreen, Desktop } from "./index";
 import colors from "../colors"
 import SliderDots from './SliderDots'
 
+import ProgressiveImage from "react-progressive-graceful-image";
+
 const styles = {
     "section": {
       "height": "100vh",
@@ -34,7 +36,7 @@ const styles = {
 }
 
 
-function ProjectCrousel({images, headings, details, buttons, title, flip}) {
+function ProjectCrousel({images, headings, details, buttons, title, flip, placeholder}) {
     const [index, setIndex] = useState(0)
 
     const section1 = useRef(null)
@@ -47,8 +49,14 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
             <div style={{...styles.section }} ref={section1} >
                 <div style = {{ paddingLeft:"10%", zIndex:2, height:"100%"}}>
                     <div style= {{ display:'flex', height:"100%", paddingLeft:"2%", paddingRight:"10%", flexDirection:"column"}}>
-                        <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:"25vh", width:"100%"}} className="fadeIn2">
-                        <img src={images[index]} style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}} alt="Apoorv"/>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:"25vh", width:"100%"}} className="fadeIn2">
+                        {/* <img src={images[index]} style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}} alt="Apoorv"/>
+                         */}
+                        <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{height:"100%", width:"100%", opacity:"0.5"}}>{placeholder}</div>: <img src={src} alt={headings[index]}  style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}}/>;
+                                }}
+                            </ProgressiveImage>
                         </div>
                         <div className="fadeIn1" style={{paddingTop:"9%"}}>
                             <Heading label={headings[index]}/>
@@ -89,7 +97,11 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                     <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
                         <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
                             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center" }} className="fadeIn">
-                                <img src={images[index]} alt={headings[index]}  height={350}/>
+                            <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{ opacity: loading ? 0.5 : 1 }} >{placeholder}</div> : <img src={src} alt={headings[index]}  height={350}/>;
+                                }}
+                            </ProgressiveImage>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center"}}>
                                 <div>
@@ -125,7 +137,11 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                     <div style={{display:"flex", flexDirection:"column", alignSelf:"center"}}>
                         <div style={{display:"flex", paddingTop:"1%", paddingBottom:"1%"}}>
                             <div style={{width:"50vw", display:"flex", justifyContent:"center", alignItems:"center" }} className="fadeIn">
-                                <img src={images[index]} alt={headings[index]}  height={350}/>
+                                <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{ opacity: loading ? 0.5 : 1 }} >{placeholder}</div> : <img src={src} alt={headings[index]} style={{ opacity: loading ? 0.5 : 1 }} />;
+                                }}
+                            </ProgressiveImage>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center"}}>
                                 <div>
@@ -165,7 +181,13 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                 <div style = {{ paddingLeft:"10%", zIndex:2, height:"100%"}}>
                     <div style= {{ display:'flex', height:"100%", paddingLeft:"2%", paddingRight:"10%", flexDirection:"column"}}>
                         <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:"25vh", width:"100%"}} className="fadeIn2">
-                        <img src={images[index]} style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}} alt="Apoorv"/>
+                        {/* <img src={images[index]} style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}} alt="Apoorv"/>
+                         */}
+                        <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{height:"100%", width:"100%", opacity:"0.5"}}>{placeholder}</div>: <img src={src} alt={headings[index]}  style={{maxHeight:"25vh", "filter": "drop-shadow(0px 4px 4px #000000)","borderRadius":"10px", zIndex:3}}/>;
+                                }}
+                            </ProgressiveImage>
                         </div>
                         <div className="fadeIn2" style={{paddingTop:"9%"}}>
                             <Heading label={headings[index]}/>
@@ -223,7 +245,11 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                             </div>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center", paddingLeft:"10%" }} className="fadeIn2">
-                                <img src={images[index]} alt="Project" height={350}/>              
+                            <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{ opacity: loading ? 0.5 : 1 }} >{placeholder}</div> : <img src={src} alt={headings[index]} height={350 } />;
+                                }}
+                            </ProgressiveImage>                  
                             </div>
                         </div>
                         <div style={{ color:"white", display:'flex', justifyContent:"center"}}>
@@ -259,7 +285,11 @@ function ProjectCrousel({images, headings, details, buttons, title, flip}) {
                             </div>
                             </div>
                             <div style={{width:"50vw", display:"flex", alignItems:"center", paddingLeft:"10%" }} className="fadeIn2">
-                                <img src={images[index]} alt="Project" height={350}/>              
+                            <ProgressiveImage src={images[index]} placeholder="" >
+                                {(src, loading) => {
+                                    return loading ? <div style={{ opacity: loading ? 0.5 : 1 }} >{placeholder}</div> : <img src={src} alt={headings[index]} style={{ opacity: loading ? 0.5 : 1 }} />;
+                                }}
+                            </ProgressiveImage>            
                             </div>
                         </div>
                         <div style={{ color:"white", display:'flex', justifyContent:"center"}}>
