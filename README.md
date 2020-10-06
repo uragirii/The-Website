@@ -6,7 +6,7 @@
 
 This is my Personal Porfolio-Website to showcase my talent in CSS, React and Web Development along with my other projects.
 
-Right now almost all of the functions are working good. Site is now optimized for mobile users! My next focus is to make load times faster and add animations.
+The Website is completly ready. GO and visit the website.
 
 Visit Website Here : [apoorv.web.app](http://apoorv.web.app/)
 
@@ -33,15 +33,18 @@ Now I've also added favicon and improved all the project details.
 I used `React JS` to make the website and then used Firebase Hosting to Host the website. But along with `React JS` following things have significantly helped in the process.
 
 - `GSAP` and `useIntersection` : The animations on scoll is provided using GSAP 3.0 and using a custom hook : `useIntersection`. If you want to know what `useIntersection` is read about [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
-- Figma : I can't stress this enough but using Figma for designing the website beforehand significantly reduced my developement time. I will share Figma Project for this website in future. Check out Figma [here](https://www.figma.com/).
-- Nodemailer : I'm using nodemailer to send emails for contacting me. It has really reduced my work.
+- `Figma` : I can't stress this enough but using Figma for designing the website beforehand significantly reduced my developement time. I will share Figma Project for this website in future. Check out Figma [here](https://www.figma.com/).
+- `Nodemailer` : I'm using nodemailer to send emails for contacting me. It has really reduced my work.
+- `Firebase` : Firebase is a great service for hosting the website and even check the analytics. I'm using Firebase Analytics/Google Analytics to get the analytics data.
 - Helpful Community : I just love programming community on Reddit, StackOverflow, Medium, YouTube etc. There numerous tutorials and articles have helped in solving made bugs.
 
 ### Future Plans
 
-I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. Current Version is `v0.4alphaH`. Website now designed for mobile users also. Now, I've to include animations and optimizations.
+I'm deciding to name all the alpha versions to spell `KONOHA`, birthplace of Naruto. So, in all, all there would be atmost 6 versions. 
 
-After running many tests I've decided to reduce the Image sizes and other things. I will keep you posted.
+The `v1` of website is ready and called `v1.0KONOHA`. But this doesn't mean there would not be further development. Right now, I'm looking to buy a custom domain and deploy it.
+
+Stay tuned for `v2`
 
 
 ## I found something wrong

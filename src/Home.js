@@ -177,7 +177,7 @@ function Home() {
                   <Button type="contained" label="My Stack" href="#stack" />
                 </div>
                 <div >
-                  <Button type="outlined" label="Resume" href="https://firebasestorage.googleapis.com/v0/b/the-website-ak.appspot.com/o/Resume_Updated.pdf?alt=media&token=59b3ef54-924f-4def-935b-8ccea7f391c1"/>
+                  <Button type="outlined" label="Resume" href="https://firebasestorage.googleapis.com/v0/b/the-website-ak.appspot.com/o/Resume_Updated_.pdf?alt=media&token=f1dcdfa7-2529-4697-b798-60d6b473eb5f"/>
                 </div>
               </div>
             </div>
