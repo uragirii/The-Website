@@ -79,10 +79,10 @@ function Sonali() {
                     </div>
                 </Desktop>
                 <Mobile>
-                <img src={Post_1} alt="Post 1" />
-                <img src={Post_2} alt="Post 2" />
-                <img src={Post_3} alt="Post 3" />
-                <img src={Post_4} alt="Post 4" />
+                <img src={Post_1} alt="Post 1" width="100%"/>
+                <img src={Post_2} alt="Post 2" width="100%"/>
+                <img src={Post_3} alt="Post 3" width="100%"/>
+                <img src={Post_4} alt="Post 4" width="100%"/>
                 </Mobile>
                 <div style={{marginTop:"5%"}}>
                     <Heading label="The, one year .." />
@@ -116,7 +116,7 @@ function Sonali() {
                 </BigScreen>
                 <Mobile>
                 <div style={{marginTop:"5%", display:'flex',justifyContent:"space-between", alignItems:"center", flexDirection:'column'}}>
-                    <img src={meme} alt="Meme" width="40%" />
+                    <img src={meme} alt="Meme" width="60%" />
                     <div>
                         <Para text="Yours and yours only," />
                         <div style={{marginTop:"7%"}}>
