@@ -2,7 +2,6 @@ import React from 'react'
 import colors from '../colors'
 import { Heading, Button, Para, NavBar, Mobile, Desktop, BigScreen, TextInput } from "./index";
 import logo from '../assests/favicon.png'
-import subs from './subs'
 import ReactNetflixPlayer from './Player'
 const styles = {
     "section": {
