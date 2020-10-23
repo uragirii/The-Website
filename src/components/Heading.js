@@ -22,10 +22,9 @@ const styles = {
     }
   }
 
-export default function Heading(props) {
-  const {label} = props
+export default function Heading({label, css}) {
   return (
-    <div style={styles.div} {...props}>
+    <div style={{...styles.div, ...css}}>
         <span style={styles.line}>{label.slice(0,3)}</span><span style={styles.notline}>{label.slice(3,label.length)}</span>
     </div>
 )

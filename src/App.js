@@ -7,7 +7,7 @@ import E404 from './404'
 import Unsubscribe from "./Unsubscribe";
 import { Route, Switch } from 'react-router-dom';
 import Sonali from './Sonali'
-
+import Lobby from './Lobby'
 
 function App(){
   return (
@@ -21,6 +21,8 @@ function App(){
         <Route path="/projects" component={Projects} exact/>
         <Route path="/project" component={Projects} exact/>
         <Route path="/sonali" component={Sonali} exact/>
+        <Route path="/girlfriend" component={Sonali} exact/>
+        <Route path="/lobby" component={Lobby} exact/>
         <Route path="/email/unsubscribe/:id" component={Unsubscribe} exact/>
         <Route component={E404} /> 
       </Switch>

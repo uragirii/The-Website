@@ -6,8 +6,12 @@ import TextArea from './TextArea'
 import ProjectsBar from './ProjectsBar'
 import Loader from './Loader'
 import NavBar from './NavBar'
+import LobbyView from './LobbyView'
+import LobbyVerify from './LobbyVerify'
+
 import {BigScreen,Mobile,Desktop} from './ScreenSize'
 
 export {
-    Button, Heading, Para, TextInput,TextArea, ProjectsBar, Loader, NavBar, BigScreen, Mobile, Desktop
+    Button, Heading, Para, TextInput,TextArea, ProjectsBar, Loader, NavBar, BigScreen, Mobile, Desktop, LobbyView,
+    LobbyVerify
 }

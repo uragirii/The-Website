@@ -11,14 +11,18 @@
     "firebase-functions": "^3.11.0",
     "firebase-tools": "^8.9.0",
     "gsap": "^3.5.0",
+    "i18next": "^19.8.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.7.3",
+    "react-icons": "^3.11.0",
     "react-progressive-graceful-image": "^0.6.12",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-tooltip": "^4.2.9",
-    "react-use": "^15.3.3"
+    "react-use": "^15.3.3",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
