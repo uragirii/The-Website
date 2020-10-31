@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import firebase from '../firebaseAnalytics'
 import i18n from 'i18next';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import {
@@ -111,6 +112,7 @@ export default function ReactNetflixPlayer({
   const [showDataNext, setShowDataNext] = useState(false);
   const [showPlaybackRate, setShowPlaybackRate] = useState(false);
   const [showReproductionList, setShowReproductionList] = useState(false);
+  const [currRemoteProgress, setCurrRemoteProgress]= useState(null)
 
   const playbackRateOptions = ['0.25', '0.5', '0.75', 'Normal', '1.25', '1.5', '2'];
 
@@ -121,6 +123,47 @@ export default function ReactNetflixPlayer({
     start: 0,
     end: 0,
   });
+
+  const lobby = firebase.database().ref('lobby/4356')
+  const lobbyStatus = lobby.child("status")
+  const lobbyProgress = lobby.child("progress")
+
+  useEffect(()=>{
+    lobbyStatus.on('value', (snapshot)=>{
+      const remoteStatus = snapshot.val()
+      if(remoteStatus.play){
+        setPlaying(true)
+        if (videoComponent.current.paused) {
+          videoComponent.current.play();
+        }
+      }
+      else{
+        setPlaying(false)
+        if (!videoComponent.current.paused) {
+          videoComponent.current.pause();
+          return;
+        }
+      }
+    })
+    return ()=>{
+      lobbyStatus.off()
+    }
+  },)
+
+  useEffect(()=>{
+    lobbyProgress.on('value', (snapshot)=>{
+        const remoteProgress = snapshot.val().current
+        if(remoteProgress!=currRemoteProgress){
+          console.log("Called")
+          setCurrRemoteProgress(remoteProgress)
+          videoComponent.current.currentTime = remoteProgress;
+          setProgress(remoteProgress)
+        }
+    })
+    return ()=>{
+      lobbyProgress.off()
+    }
+  },)
 
   const secondsToHms = d => {
     d = Number(d);
@@ -188,16 +231,18 @@ export default function ReactNetflixPlayer({
       start,
       endBuffer,
     });
-
+    // lobbyProgress.update({current:e.target.currentTime})
     setProgress(e.target.currentTime);
   };
 
   const goToPosition = position => {
     videoComponent.current.currentTime = position;
+    lobbyProgress.update({current:position})
     setProgress(position);
   };
 
   const play = () => {
+    lobbyStatus.update({play:!playing})
     setPlaying(!playing);
 
     if (videoComponent.current.paused) {
@@ -234,11 +279,13 @@ export default function ReactNetflixPlayer({
 
     if (current + seconds >= total - 2) {
       videoComponent.current.currentTime = videoComponent.current.duration - 1;
+      lobbyProgress.update({current:videoComponent.current.duration - 1})
       setProgress(videoComponent.current.duration - 1);
       return;
     }
 
     videoComponent.current.currentTime += seconds;
+    lobbyProgress.update({current: videoComponent.current.currentTime + seconds})
     setProgress(videoComponent.current.currentTime + seconds);
   };
 
@@ -247,11 +294,13 @@ export default function ReactNetflixPlayer({
 
     if (current - seconds <= 0) {
       videoComponent.current.currentTime = 0;
+      lobbyProgress.update({current:0})
       setProgress(0);
       return;
     }
 
     videoComponent.current.currentTime -= seconds;
+    lobbyProgress.update({current:videoComponent.current.currentTime - seconds})
     setProgress(videoComponent.current.currentTime - seconds);
   };
 
@@ -395,10 +444,12 @@ export default function ReactNetflixPlayer({
     if (e.keyCode === 32 && videoComponent.current) {
       if (videoComponent.current.paused) {
         videoComponent.current.play();
+        lobbyStatus.update({play:true})
         setPlaying(true);
         hoverScreen();
       } else {
         videoComponent.current.pause();
+      lobbyStatus.update({play:false})
         setPlaying(false);
         hoverScreen();
       }
@@ -555,7 +606,6 @@ export default function ReactNetflixPlayer({
         onTimeUpdate={timeUpdate}
         onError={erroVideo}
         onEnded={onEndedFunction}
-        onPause={()=>{console.log("Paused")}}
         crossOrigin="true"
       >
         <track label="English" kind="subtitles" srcLang="en" src={subs} default style={{zIndex:10, fontSize:"Montserrat"}}  ></track>
