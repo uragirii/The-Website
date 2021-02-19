@@ -607,6 +607,7 @@ export default function ReactNetflixPlayer({
         onError={erroVideo}
         onEnded={onEndedFunction}
         crossOrigin="true"
+        type="video/mp4"
       >
         <track label="English" kind="subtitles" srcLang="en" src={subs} default style={{zIndex:10, fontSize:"Montserrat"}}  ></track>
       </video>
