@@ -27,7 +27,7 @@ export default function LobbyVerify({saveMovie, code, link,setSubs}) {
     const [movie, setMovie ]  = useState(null)
     const [verified, setVerified] = useState(false)
     const file = useRef(null)
-    const size = 734992466
+    const size = 2062210884
 
     const checkAndProceed = (selectedFile, subs)=>{
         if(selectedFile.size == size){
