@@ -20,7 +20,7 @@ const styles = {
 
 export default function LobbyView({movie, subs}) {
     const url = URL.createObjectURL(movie)
-    let subUrl = URL.createObjectURL(subs)
+    let subUrl = subs ? URL.createObjectURL(subs) : undefined
     // subUrl = subUrl.slice(0, subUrl.size, "text/srt")
     console.log(url)
     return (

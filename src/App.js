@@ -8,6 +8,7 @@ import Unsubscribe from "./Unsubscribe";
 import { Route, Switch } from 'react-router-dom';
 import Sonali from './Sonali'
 import Lobby from './Lobby'
+import LobbyCode from './components/LobbyCode';
 
 function App(){
   return (
@@ -23,6 +24,7 @@ function App(){
         <Route path="/sonali" component={Sonali} exact/>
         <Route path="/girlfriend" component={Sonali} exact/>
         <Route path="/lobby" component={Lobby} exact/>
+        <Route path="/lobby/:roomId" component={LobbyCode} exact/>
         <Route path="/email/unsubscribe/:id" component={Unsubscribe} exact/>
         <Route component={E404} /> 
       </Switch>

@@ -34,6 +34,7 @@ import {
 } from './styles';
 
 import translations from './translations';
+import { useParams } from 'react-router';
 
 i18n.use(initReactI18next).init({
   resources: translations,
@@ -113,6 +114,8 @@ export default function ReactNetflixPlayer({
   const [showPlaybackRate, setShowPlaybackRate] = useState(false);
   const [showReproductionList, setShowReproductionList] = useState(false);
   const [currRemoteProgress, setCurrRemoteProgress]= useState(null)
+  const { roomId } = useParams();
+
 
   const playbackRateOptions = ['0.25', '0.5', '0.75', 'Normal', '1.25', '1.5', '2'];
 
@@ -124,7 +127,7 @@ export default function ReactNetflixPlayer({
     end: 0,
   });
 
-  const lobby = firebase.database().ref('lobby/4356')
+  const lobby = firebase.database().ref('lobby').child(roomId)
   const lobbyStatus = lobby.child("status")
   const lobbyProgress = lobby.child("progress")
 

@@ -1,10 +1,12 @@
 
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import colors from '../colors'
-import { Heading, Button, Para, NavBar, Mobile, Desktop, BigScreen, TextInput } from "./index";
+import { Heading, Para, NavBar, Mobile, Desktop, BigScreen, TextInput } from "./index";
 import logo from '../assests/favicon.png'
 import upload from '../assests/Upload.png'
 import video from '../assests/Video.png'
+import Button from './Button'
+import firebase from '../firebaseAnalytics'
 
 const styles = {
     "section": {
@@ -27,27 +29,44 @@ export default function LobbyVerify({saveMovie, code, link,setSubs}) {
     const [movie, setMovie ]  = useState(null)
     const [verified, setVerified] = useState(false)
     const file = useRef(null)
-    const size = 2062210884
+    const [loading, setLoading] = useState(true);
+    const [details, setDetails] = useState([]);
+    
+    useEffect(()=>{
+    const lobbyRef = firebase.database().ref("lobby").child(code);
+    lobbyRef.on('value', (snapshot)=>{
+        console.log(snapshot.val())
+        setDetails(snapshot.val().details);
+        setLoading(false);
+    })
+    },[])
 
     const checkAndProceed = (selectedFile, subs)=>{
-        if(selectedFile.size == size){
-            setVerified(true)
-            saveMovie(selectedFile)
-            setSubs(subs)
-        }
-        else if(subs.size == size){
-            setVerified(true)
-            saveMovie(subs)
-            setSubs(selectedFile)
-        }
-        else{
-            setVerified(false)
+        if(details.length === 1){
+            // Check only movue
+            if(details.includes(selectedFile.size) ){
+                setVerified(true)
+                saveMovie(selectedFile)
+                setSubs(subs)
+            }
+            else{
+                setVerified(false)
+            }
+        }else{
+            if(details.includes(selectedFile.size) && details.includes(subs?.size)){
+                setVerified(true)
+                saveMovie(selectedFile)
+                setSubs(subs)
+            }
+            else{
+                setVerified(false)
+            }
         }
     }
 
     const selectFile = (e)=>{
         console.log(e)
-        if(e.target.files.length==2){
+        if(e.target.files.length===details.length){
             // console.log(e.target.files)
             const selectedFile = e.target.files[0]
             const subs = e.target.files[1]
@@ -56,8 +75,11 @@ export default function LobbyVerify({saveMovie, code, link,setSubs}) {
             setUploaded(true)
             checkAndProceed(selectedFile,subs)
         }
+        
     }
-
+    if(loading){
+        return <div style={styles.section}><Para text="Loading ..." /> </div>
+    }
     return (
         <div style={styles.section}> 
             <div style={{paddingTop:"5%", paddingRight:"10%", paddingLeft:"7%"}}>
@@ -66,12 +88,11 @@ export default function LobbyVerify({saveMovie, code, link,setSubs}) {
                 </div>
                 <div style={{display:'flex'}}>
                     <div style={{maxWidth:"40%", marginTop:"5%"}}>
-                        <Para text="Select your video" />
-                        <Para text="Your video will be checked with main video and then you can join the team" />
+                        <Para text="Share the link" />
+                        <Para text="Your Friends can start by going to the url and uploading the same movie" />
                         <div style={{marginTop:"10%", color:"white", fontFamily:"Montserrat", fontSize:18}}>
-                            Meeting Link
+                            {window.location.href}
                         </div>
-                        <Para text={link} />
                     </div>
                     <div style={{textAlign:"center",paddingLeft:"20%"}}>
                         {
