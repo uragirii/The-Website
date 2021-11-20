@@ -55,8 +55,8 @@ export default function LobbyVerify({saveMovie, code, link,setSubs}) {
         }else{
             if(details.includes(selectedFile.size) && details.includes(subs?.size)){
                 setVerified(true)
-                saveMovie(selectedFile)
-                setSubs(subs)
+                saveMovie(selectedFile.size> subs.size ? selectedFile : subs)
+                setSubs(selectedFile.size< subs.size ? selectedFile : subs)
             }
             else{
                 setVerified(false)
